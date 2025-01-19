@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="ELEMENTS" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 499.81 499.81">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #fff;
+      }
+    </style>
+  </defs>
+  <path class="cls-1" d="M132.81,15.73L49.18,99.36v301.08h100.36v83.63l83.64-83.63h66.91l150.54-150.54V15.73H132.81ZM417.17,233.18l-66.91,66.91h-66.91l-58.55,58.55v-58.55h-75.27V49.18h267.63v184Z"/>
+  <rect class="cls-1" x="333.54" y="107.72" width="33.45" height="100.36"/>
+  <rect class="cls-1" x="241.54" y="107.72" width="33.45" height="100.36"/>
+</svg>

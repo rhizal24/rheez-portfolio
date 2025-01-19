@@ -7,6 +7,9 @@ export default {
   ],
   theme: {
     extend: {
+      fontFamily:{
+        'just-sans': ['var(--font-just-sans)', 'sans'],
+      },
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
