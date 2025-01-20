@@ -7,12 +7,21 @@ export default {
   ],
   theme: {
     extend: {
-      fontFamily:{
-        'just-sans': ['var(--font-just-sans)', 'sans'],
+      fontFamily: {
+        "just-sans": ["var(--font-just-sans)", "sans"],
       },
       colors: {
         background: "var(--background)",
-        foreground: "var(--foreground)",
+        light: "#ECF6FE",
+        "light-hover": "#E2F1FE",
+        "light-active": "#C3E2FC",
+        normal: "#3FA2F6",
+        "normal-hover": "#3992DD",
+        "normal-active": "#3282C5",
+        dark: "#2F7AB9",
+        "dark-hover": "#266194",
+        "dark-active": "#1C496F",
+        darker: "#163956",
       },
     },
   },

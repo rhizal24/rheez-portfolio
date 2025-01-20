@@ -1,12 +1,14 @@
-import localFont from 'next/font/local'
+import localFont from "next/font/local";
 import "./globals.css";
 
 const JustSans = localFont({
-  src: [{
-    path:'../../public/fonts/JustSans.ttf',
-    weight: '400 700'
-  }],
-  variable: '--font-just-sans'
+  src: [
+    {
+      path: "../../public/fonts/JustSans.ttf",
+      weight: "100...900",
+    },
+  ],
+  variable: "--font-just-sans",
 });
 
 export const metadata = {
