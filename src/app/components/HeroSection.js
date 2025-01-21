@@ -86,7 +86,10 @@ export default function Hero() {
             </a>
           </li>
           <li>
-            <a href="">
+            <a
+              href="https://discodrdapp.com/users/770854990574518293"
+              target="_blank"
+            >
               <FaDiscord
                 size={45}
                 className="fill-dark border-dark border-2 p-2 rounded-full hover:fill-[#161616] hover:bg-dark easy-in-out transition-all duration-300 active:bg-normal active:scale-90"
