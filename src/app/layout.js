@@ -19,6 +19,9 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
+      <head>
+        <link rel="icon" href="./icon/rheez.png" />
+      </head>
       <body className={`${JustSans.variable} ${JustSans.variable} antialiased`}>
         {children}
       </body>

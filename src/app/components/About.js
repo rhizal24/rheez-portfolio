@@ -9,7 +9,7 @@ export default function About() {
       </div>
       <div className="p-2 bg-normal w-[370px] h-[250px] rounded-[10px] border-dark border-2"></div>
       <div>
-        <p className="text-[18.5px] font-light text-left">
+        <p className="text-[18px] font-light text-left">
           My name is Muhammad Rhizal Romadhon, 4th semester information
           engineering student at Gadjah Mada University. As a passionate motion
           designer and video editor, I really enjoy realizing the ideas that
