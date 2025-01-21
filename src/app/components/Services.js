@@ -1,6 +1,8 @@
 import { MdAnimation } from "react-icons/md";
 import { FaComputer } from "react-icons/fa6";
 import { CgWebsite } from "react-icons/cg";
+import Image from "next/image";
+import Arrow from "../arrow.js";
 
 const servicesData = [
   {
@@ -42,8 +44,14 @@ export default function Services() {
               key={index}
               className="flex flex-col gap-2 items-center bg-normal bg-opacity-10 background py-3 px-5 w-[390px] rounded-2xl border-2 border-normal "
             >
-              <div>
+              <div className="flex gap-6 items-center">
+                <div className="rotate-180">
+                  <Arrow overlap={5} />
+                </div>
                 <div className="">{item.icon}</div>
+                <div>
+                  <Arrow overlap={5} />
+                </div>
               </div>
               <h3>{item.title}</h3>
               <p className="text-center font-extralight text-[12.5px]">
