@@ -1,27 +1,15 @@
-import Image from "next/image";
+import { IoMdDownload } from "react-icons/io";
+import { FaInstagram } from "react-icons/fa";
+import { FaGithub } from "react-icons/fa";
+import { FaDiscord } from "react-icons/fa";
+import { FaYoutube } from "react-icons/fa";
+import { LiaLinkedinIn } from "react-icons/lia";
+import { FaDribbble } from "react-icons/fa";
 
 export default function Hero() {
-  const socialMedia = [
-    {
-      name: "Instagram",
-      path: "./icon/instagram.svg",
-    },
-    {
-      name: "LinkedIn",
-      path: "./icon/linkedin.svg",
-    },
-    {
-      name: "Dribbble",
-      path: "./icon/dribbble.svg",
-    },
-    {
-      name: "Discord",
-      path: "./icon/discord.svg",
-    },
-  ];
   return (
     <div
-      className={`font-just-sans w-full flex border-[1px] py-[40px] flex-col gap-[40px]`}
+      className={`font-just-sans w-full flex py-[40px] flex-col gap-[40px] text-light px-[20px]`}
     >
       <div>
         <div className={`text-[20px] font-semibold`}>Hey, I am Rhizal</div>
@@ -53,28 +41,67 @@ export default function Hero() {
                 Download CV
               </div>
               <div>
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  height="24px"
-                  viewBox="0 -960 960 960"
-                  width="24px"
-                  className="fill-[#1C496F] group-hover:fill-[#161616] transition-colors duration-300"
-                >
-                  <path d="M480-320 280-520l56-58 104 104v-326h80v326l104-104 56 58-200 200ZM240-160q-33 0-56.5-23.5T160-240v-120h80v120h480v-120h80v120q0 33-23.5 56.5T720-160H240Z" />
-                </svg>
+                <IoMdDownload
+                  size={20}
+                  className="fill-dark-active group-hover:fill-[#161616] h-[20px]easy-in-out transition-all duration-300"
+                />
               </div>
             </div>
           </button>
         </div>
-        <div className="flex gap-4">
-          {socialMedia.map((icon) => {
-            return (
-              <div key={icon.name} className="">
-                <Image src={icon.path} alt={icon.name} width={24} height={24} />
-              </div>
-            );
-          })}
-        </div>
+        <ul className="flex gap-[14px]">
+          <li>
+            <a href="https://instagram.com/rhizal.rh_ " target="_blank">
+              <FaInstagram
+                size={45}
+                className="fill-dark border-dark border-2 p-2 rounded-full hover:fill-[#161616] hover:bg-dark easy-in-out transition-all duration-300 active:bg-normal active:scale-90"
+              />
+            </a>
+          </li>
+          <li>
+            <a href="https://youtube.com/@rheez05" target="_blank">
+              <FaYoutube
+                size={45}
+                className="fill-dark border-dark border-2 p-2 rounded-full hover:fill-[#161616] hover:bg-dark easy-in-out transition-all duration-300 active:bg-normal active:scale-90"
+              />
+            </a>
+          </li>
+          <li>
+            <a href="https://github.com/rhizal24" target="_blank">
+              <FaGithub
+                size={45}
+                className="fill-dark border-dark border-2 p-2 rounded-full hover:fill-[#161616] hover:bg-dark hover:border-da easy-in-out transition-all duration-300 active:bg-normal active:scale-90"
+              />
+            </a>
+          </li>
+          <li>
+            <a
+              href="https://www.linkedin.com/in/muhammad-rhizal-rhomadon-2928752ba/"
+              target="_blank"
+            >
+              <LiaLinkedinIn
+                size={45}
+                className="fill-dark border-dark border-2 p-1 rounded-full hover:fill-[#161616] hover:bg-dark easy-in-out transition-all duration-300 active:bg-normal active:scale-90"
+              />
+            </a>
+          </li>
+          <li>
+            <a href="">
+              <FaDiscord
+                size={45}
+                className="fill-dark border-dark border-2 p-2 rounded-full hover:fill-[#161616] hover:bg-dark easy-in-out transition-all duration-300 active:bg-normal active:scale-90"
+              />
+            </a>
+          </li>
+          <li>
+            <a href="https://dribbble.com/rhizalrhoma" target="_blank">
+              <FaDribbble
+                size={45}
+                className="fill-dark border-dark border-2 p-2 rounded-full hover:fill-[#161616] hover:bg-dark easy-in-out transition-all duration-300 active:bg-normal active:scale-90"
+              />
+            </a>
+          </li>
+        </ul>
       </div>
     </div>
   );

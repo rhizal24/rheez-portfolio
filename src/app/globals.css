@@ -25,3 +25,13 @@ body {
     font-family: JustSans, sans-serif;
   }
 }
+
+h1{
+  font-size: 32px;
+  font-weight: 700;
+}
+
+h2{
+  font-size: 12px;
+  font-weight: 200;
+}
