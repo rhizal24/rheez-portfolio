@@ -4,6 +4,7 @@ import Services from "./components/Services.js";
 import RecentWorks from "./components/Works.js";
 import EduXExp from "./components/EduxEx.js";
 import Skills from "./components/Skills.js";
+import Message from "./components/Message.js";
 
 export default function Home() {
   return (
@@ -14,6 +15,7 @@ export default function Home() {
       <RecentWorks />
       <EduXExp />
       <Skills />
+      <Message />
     </main>
   );
 }

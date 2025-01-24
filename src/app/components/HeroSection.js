@@ -1,10 +1,12 @@
 import { IoMdDownload } from "react-icons/io";
-import { FaInstagram } from "react-icons/fa";
-import { FaGithub } from "react-icons/fa";
-import { FaDiscord } from "react-icons/fa";
-import { FaYoutube } from "react-icons/fa";
+import {
+  FaInstagram,
+  FaGithub,
+  FaDiscord,
+  FaYoutube,
+  FaDribbble,
+} from "react-icons/fa";
 import { LiaLinkedinIn } from "react-icons/lia";
-import { FaDribbble } from "react-icons/fa";
 
 export default function Hero() {
   return (
