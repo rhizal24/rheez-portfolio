@@ -2,7 +2,7 @@ import { MdAnimation } from "react-icons/md";
 import { FaComputer } from "react-icons/fa6";
 import { CgWebsite } from "react-icons/cg";
 import Image from "next/image";
-import Arrow from "../arrow.js";
+import Arrow from "./arrow.js";
 
 const servicesData = [
   {
