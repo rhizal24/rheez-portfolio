@@ -39,20 +39,24 @@ export default function Message() {
             className="rounded-[8px] w-[50%] py-2 px-3 focus:outline-none"
           />
         </div>
-        <div className="flex flex-col gap-4">
+        <div className="flex flex-col gap-4 justify-center items-center">
           <textarea
             name=""
             id="input-message"
             placeholder="Your Message"
             className="rounded-[8px] w-[100%] h-[200px] py-2 px-3 focus:outline-none"
           ></textarea>
+          <button
+            type="submit"
+            className="group h-10 w-36 rounded-full p-[1px] bg-gradient-to-br from-normal to-light-active hover:bg-[#1b1b1b] transition-all duration-300 active:scale-95"
+          >
+            <div className="flex gap-1 font-[600] bg-[#1b1b1b] w-full h-full items-center justify-center rounded-full group-hover:bg-transparent ease-in-out transition-all duration-300 group-active:bg-normal">
+              <div className="bg-gradient-to-br from-normal to-light-active text-transparent bg-clip-text group-hover:text-[#1b1b1b] transition-colors duration-300 font-semibold text-[14px]">
+                Send Message
+              </div>
+            </div>
+          </button>
         </div>
-        <button
-          type="button"
-          className="text-white font-semibold text-[14px] mx-[105px] py-2 bg-gradient-to-bl from-normal to-light-active rounded-full border-[1px] border-normal transition-all duration-300 ease-in-out active:scale-95 hover:bg-normal"
-        >
-          Send Message
-        </button>
       </div>
     </div>
   );
