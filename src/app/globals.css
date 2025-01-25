@@ -4,12 +4,33 @@
 
 :root {
   --background: #161616;
+  --foreground: #ededed;
+  --light: #ECF6FE,
+  --lightHover: #E2F1FE,
+  --lightActive: #C3E2FC,
+  --normal: #3FA2F6,
+  --normalHover: #3992DD,
+  --normalActive: #3282C5,
+  --dark: #2F7AB9,
+  --darkHover: #266194,
+  --darkActive: #1C496F,
+  --darker: #163956,
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
     --background: #0a0a0a;
     --foreground: #ededed;
+    --light: #ECF6FE,
+    --light-hover: #E2F1FE,
+    --lightActive: #C3E2FC,
+    --normal: #3FA2F6,
+    --normal-hover: #3992DD,
+    --normal-active: #3282C5,
+    --dark: #2F7AB9,
+    --dark-hover: #266194,
+    --dark-active: #1C496F,
+    --darker: #163956,
   }
 }
 
@@ -44,4 +65,26 @@ h3{
 #input-message{
   background: #1b1b1b;
   border: 1px solid #2F7AB9;
+}
+
+@property --myColor1 {
+  syntax: '<color>';
+  initial-value: #3FA2F6;
+  inherits: false;
+}
+
+@property --myColor2 {
+  syntax: '<color>';
+  initial-value: #8FBDE4;
+  inherits: false;
+}
+
+.my-button{
+  background: linear-gradient(-60deg, var(--myColor1), var(--myColor2));
+  transition: --myColor1 0.3s ease-in-out, --myColor2 0.3s ease-in-out;
+}
+
+.my-button:hover {  
+  --myColor1: transparent;
+  --myColor2: transparent;
 }

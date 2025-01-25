@@ -6,18 +6,26 @@ import EduXExp from "./components/EduxEx.js";
 import Skills from "./components/Skills.js";
 import Message from "./components/Message.js";
 import Footer from "./components/Footer.js";
+import Navbar from "./components/Navbar.js";
 
 export default function Home() {
   return (
     <main>
-      <HeroSection />
-      <About />
-      <Services />
-      <RecentWorks />
-      <EduXExp />
-      <Skills />
-      <Message />
-      <Footer />
+      <nav className="fixed w-full z-10">
+        <Navbar />
+      </nav>
+      <section className="pt-14">
+        <HeroSection />
+        <About />
+        <Services />
+        <RecentWorks />
+        <EduXExp />
+        <Skills />
+        <Message />
+      </section>
+      <footer>
+        <Footer />
+      </footer>
     </main>
   );
 }

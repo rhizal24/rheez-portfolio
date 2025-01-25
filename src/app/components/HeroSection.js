@@ -51,11 +51,11 @@ export default function Hero() {
             </div>
           </button>
         </div>
-        <ul className="flex gap-[14px]">
+        <ul className="flex gap-[10px]">
           <li>
             <a href="https://instagram.com/rhizal.rh_ " target="_blank">
               <FaInstagram
-                size={45}
+                size={40}
                 className="fill-dark border-dark border-2 p-2 rounded-full hover:fill-[#161616] hover:bg-dark easy-in-out transition-all duration-300 active:bg-normal active:scale-90"
               />
             </a>
@@ -63,7 +63,7 @@ export default function Hero() {
           <li>
             <a href="https://youtube.com/@rheez05" target="_blank">
               <FaYoutube
-                size={45}
+                size={40}
                 className="fill-dark border-dark border-2 p-2 rounded-full hover:fill-[#161616] hover:bg-dark easy-in-out transition-all duration-300 active:bg-normal active:scale-90"
               />
             </a>
@@ -71,7 +71,7 @@ export default function Hero() {
           <li>
             <a href="https://github.com/rhizal24" target="_blank">
               <FaGithub
-                size={45}
+                size={40}
                 className="fill-dark border-dark border-2 p-2 rounded-full hover:fill-[#161616] hover:bg-dark hover:border-da easy-in-out transition-all duration-300 active:bg-normal active:scale-90"
               />
             </a>
@@ -82,18 +82,18 @@ export default function Hero() {
               target="_blank"
             >
               <LiaLinkedinIn
-                size={45}
+                size={40}
                 className="fill-dark border-dark border-2 p-1 rounded-full hover:fill-[#161616] hover:bg-dark easy-in-out transition-all duration-300 active:bg-normal active:scale-90"
               />
             </a>
           </li>
           <li>
             <a
-              href="https://discodrdapp.com/users/770854990574518293"
+              href="https://discodrdapp.com/users/770854990574018293"
               target="_blank"
             >
               <FaDiscord
-                size={45}
+                size={40}
                 className="fill-dark border-dark border-2 p-2 rounded-full hover:fill-[#161616] hover:bg-dark easy-in-out transition-all duration-300 active:bg-normal active:scale-90"
               />
             </a>
@@ -101,7 +101,7 @@ export default function Hero() {
           <li>
             <a href="https://dribbble.com/rhizalrhoma" target="_blank">
               <FaDribbble
-                size={45}
+                size={40}
                 className="fill-dark border-dark border-2 p-2 rounded-full hover:fill-[#161616] hover:bg-dark easy-in-out transition-all duration-300 active:bg-normal active:scale-90"
               />
             </a>
