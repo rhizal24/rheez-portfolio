@@ -11,7 +11,7 @@ import { LiaLinkedinIn } from "react-icons/lia";
 export default function Hero() {
   return (
     <div
-      className={`font-just-sans w-full flex py-[40px] flex-col gap-[40px] text-light px-[20px]`}
+      className={`font-just-sans w-full flex pt-[40px] pb-[60px] flex-col gap-[40px] text-light px-[20px]`}
     >
       <div>
         <div className={`text-[20px] font-semibold`}>Hey, I am Rhizal</div>

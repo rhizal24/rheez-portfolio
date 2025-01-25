@@ -53,7 +53,7 @@ const Categories = [
 
 export default function Skills() {
   return (
-    <div className="font-just-sans w-full flex py-[40px] flex-col justify-center items-center text-light bg-[#191919] px-[20px] gap-[40px]">
+    <div className="font-just-sans w-full flex pt-[40px] pb-[60px] flex-col justify-center items-center text-light bg-[#191919] px-[20px] gap-[40px]">
       <div className="flex flex-col justify-center items-center">
         <h1 className="bg-gradient-to-br from-normal to-light text-transparent bg-clip-text">
           My Skills
