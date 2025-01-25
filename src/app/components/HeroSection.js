@@ -45,7 +45,7 @@ export default function Hero() {
               <div>
                 <IoMdDownload
                   size={20}
-                  className="fill-dark-active group-hover:fill-[#161616] h-[20px]easy-in-out transition-all duration-300"
+                  className="fill-dark-active group-hover:fill-[#161616] h-[20px] easy-in-out transition-all duration-300"
                 />
               </div>
             </div>

@@ -40,3 +40,8 @@ h3{
   font-size: 21px;
   font-weight: 600;
 }
+
+#input-message{
+  background: #1b1b1b;
+  border: 1px solid #2F7AB9;
+}

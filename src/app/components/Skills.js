@@ -58,7 +58,7 @@ export default function Skills() {
         <h1 className="bg-gradient-to-br from-normal to-light text-transparent bg-clip-text">
           My Skills
         </h1>
-        <h2 className="text-center">
+        <h2 className="text-center w-[80%]">
           Below are the skills and expertise that I have and have developed to
           date through the experience that I have.
         </h2>
