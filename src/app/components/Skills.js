@@ -7,6 +7,7 @@ import {
   SiDavinciresolve,
   SiJavascript,
 } from "react-icons/si";
+import CountUp from "./CountUp/CountUp";
 
 const Categories = [
   {
@@ -83,7 +84,17 @@ export default function Skills() {
               key={index}
             >
               <div>{category.icon}</div>
-              <div>{category.level}</div>
+              <div>
+                <CountUp
+                  from={0}
+                  to={category.level}
+                  separator=","
+                  direction="up"
+                  duration={1}
+                  className="count-up-text"
+                />
+                %
+              </div>
               <div className="text-normal">{category.softwareName}</div>
             </div>
           );
