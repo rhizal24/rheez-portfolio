@@ -10,37 +10,49 @@ import {
 
 const Categories = [
   {
-    icon: <SiAdobeaftereffects className="w-10 h-10 fill-normal" />,
+    icon: (
+      <SiAdobeaftereffects className="md:w-[50] md:h-[50] w-10 h-10 fill-normal" />
+    ),
     level: "100%",
     softwareName: "After Effects",
   },
   {
-    icon: <SiAdobepremierepro className="w-10 h-10 fill-normal" />,
+    icon: (
+      <SiAdobepremierepro className="md:w-[50] md:h-[50] w-10 h-10 fill-normal" />
+    ),
     level: "100%",
     softwareName: "Premier Pro",
   },
   {
-    icon: <SiDavinciresolve className="w-10 h-10 fill-normal" />,
+    icon: (
+      <SiDavinciresolve className="md:w-[50] md:h-[50] w-10 h-10 fill-normal" />
+    ),
     level: "90%",
     softwareName: "Davinci Resolve",
   },
   {
-    icon: <SiFigma className="w-10 h-10 fill-normal" />,
+    icon: <SiFigma className="md:w-[50] md:h-[50] w-10 h-10 fill-normal" />,
     level: "98%",
     softwareName: "Figma",
   },
   {
-    icon: <SiAdobeillustrator className="w-10 h-10 fill-normal" />,
+    icon: (
+      <SiAdobeillustrator className="md:w-[50] md:h-[50] w-10 h-10 fill-normal" />
+    ),
     level: "90%",
     softwareName: "Adobe Illustrator",
   },
   {
-    icon: <SiAdobephotoshop className="w-10 h-10 fill-normal" />,
+    icon: (
+      <SiAdobephotoshop className="md:w-[50] md:h-[50] w-10 h-10 fill-normal" />
+    ),
     level: "80%",
     softwareName: "Photoshop",
   },
   {
-    icon: <SiJavascript className="w-10 h-10 fill-normal" />,
+    icon: (
+      <SiJavascript className="md:w-[50] md:h-[50] w-10 h-10 fill-normal" />
+    ),
     level: "80%",
     softwareName: "JavaScript",
   },
@@ -53,12 +65,12 @@ const Categories = [
 
 export default function Skills() {
   return (
-    <div className="font-just-sans w-full flex pt-[40px] pb-[60px] flex-col justify-center items-center text-light bg-[#191919] px-[20px] gap-[40px]">
+    <div className="md:px-[80px] lg:px-[120px] xl:px-[140px] font-just-sans w-full flex pt-[40px] pb-[60px] flex-col justify-center items-center text-light bg-[#191919] px-[30px] gap-[40px]">
       <div className="flex flex-col justify-center items-center">
-        <h1 className="bg-gradient-to-br from-normal to-light text-transparent bg-clip-text">
+        <h1 className="md:text-[35px] bg-gradient-to-br from-normal to-light text-transparent bg-clip-text">
           My Skills
         </h1>
-        <h2 className="text-center w-[80%]">
+        <h2 className="md:text-[15px] text-center w-[80%]">
           Below are the skills and expertise that I have and have developed to
           date through the experience that I have.
         </h2>
@@ -67,7 +79,7 @@ export default function Skills() {
         {Categories.map((category, index) => {
           return (
             <div
-              className="text-[9px] flex flex-col justify-center items-center bg-normal bg-opacity-20 w-[120px] h-[145px] rounded-[10px] gap-2 border-[1px] border-opacity-20 border-normal"
+              className="md:w-[160px] md:h-[180px] md:text-[12px] text-[9px] flex flex-col justify-center items-center bg-normal bg-opacity-20 w-[120px] h-[140px] rounded-[10px] gap-2 border-[1px] border-opacity-20 border-normal"
               key={index}
             >
               <div>{category.icon}</div>

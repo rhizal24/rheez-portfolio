@@ -27,9 +27,9 @@ const Experience = [
 
 export default function EduXExp() {
   return (
-    <div className="font-just-sans w-full flex py-[40px] flex-col gap-[40px] justify-center items-center text-light bg-[#161616] px-[40px]">
+    <div className="lg:flex-row lg:items-start font-just-sans w-full flex py-[40px] flex-col gap-[40px] justify-center items-center text-light bg-[#161616] px-[30px]">
       <div className="flex flex-col justify-center items-center gap-[20px]">
-        <h1 className="bg-gradient-to-br from-normal to-light text-transparent bg-clip-text">
+        <h1 className="md:text-[35px] bg-gradient-to-br from-normal to-light text-transparent bg-clip-text">
           My Education
         </h1>
         <div className="flex flex-col gap-[20px]">
@@ -50,7 +50,7 @@ export default function EduXExp() {
         </div>
       </div>
       <div className="flex flex-col gap-[20px] justify-center items-center">
-        <h1 className="bg-gradient-to-tl from-normal to-light text-transparent bg-clip-text">
+        <h1 className="md:text-[35px] bg-gradient-to-tl from-normal to-light text-transparent bg-clip-text">
           My Experience
         </h1>
         <div>

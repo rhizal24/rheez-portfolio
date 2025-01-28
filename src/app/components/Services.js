@@ -15,7 +15,7 @@ const servicesData = [
     icon: <FaComputer size={60} />,
     title: "Video Editing",
     deskripsi:
-      "With deep experience in video editing, I provide creative solutions to create stunning videos and communicate your message effectively. From film editing, vlogs, to promotional advertisements, I am ready to provide results that match the client's vision and needs.",
+      "With deep experience in video editing, I provide creative solutions to create stunning videos and communicate your message effectively. From film editing, vlogs, to promotional advertisements",
   },
   {
     icon: <CgWebsite size={60} />,
@@ -27,22 +27,24 @@ const servicesData = [
 
 export default function Services() {
   return (
-    <div className="font-just-sans w-full flex pt-[40px] pb-[60px] flex-col gap-[40px] justify-center items-center text-light px-[20px]">
+    <div className="md:px-[50px] xl:px-[140px] font-just-sans w-full flex pt-[40px] pb-[60px] flex-col gap-[40px] justify-center items-center text-light px-[30px]">
+      {/* Header */}
       <div className="flex flex-col justify-center items-center ">
-        <h1 className="bg-gradient-to-br from-normal to-light text-transparent bg-clip-text">
+        <h1 className="md:text-[35px] bg-gradient-to-br from-normal to-light text-transparent bg-clip-text">
           Services
         </h1>
-        <h2 className="w-[85%] text-center">
+        <h2 className="md:text-[15px] w-[85%] text-center">
           Bring your ideas to life impressive designs, animations and website
         </h2>
       </div>
-      <div className="flex flex-col gap-[40px]">
+      {/* Item of services */}
+      <div className="flex flex-col gap-[40px] md:flex-row md:flex-wrap justify-center items-center">
         {servicesData.map((item, index) => {
           return (
             <button
               type="button"
               key={index}
-              className="flex flex-col gap-2 items-center bg-normal bg-opacity-10 background py-3 px-5 w-[390px] rounded-2xl border-2 border-normal "
+              className="flex flex-col gap-2 items-center bg-normal bg-opacity-10 background py-3 px-5 w-[390px] rounded-2xl border-2 border-normal"
             >
               <div className="flex gap-6 items-center">
                 <div className="rotate-180">

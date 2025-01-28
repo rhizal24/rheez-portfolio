@@ -14,7 +14,7 @@ export default function Home() {
       <nav className="fixed w-full z-10">
         <Navbar />
       </nav>
-      <section className="pt-14">
+      <section className="pt-20">
         <HeroSection />
         <About />
         <Services />

@@ -22,12 +22,13 @@ export default function RecentWorks() {
   const visibleWorks = showAll ? works : filteredWorks.slice(0, 3);
   const hiddenProjectCount = filteredWorks.length - visibleWorks.length;
   return (
-    <div className="font-just-sans w-full flex py-[40px] flex-col gap-[40px] justify-center items-center text-light bg-[#191919] px-[20px]">
+    <div className="md:px-[80px] lg:px-[120px] xl:px-[140px] font-just-sans w-full flex py-[40px] flex-col gap-[40px] justify-center items-center text-light bg-[#191919] px-[30px]">
+      {/* Header */}
       <div className="flex flex-col justify-center items-center gap-4">
-        <h1 className="bg-gradient-to-tl from-normal to-light text-transparent bg-clip-text">
+        <h1 className="md:text-[35px] bg-gradient-to-tl from-normal to-light text-transparent bg-clip-text">
           My Recent Works
         </h1>
-        <div className="flex text-[14px]">
+        <div className="flex text-[14px] md:text-[16px]">
           {categories.map((category) => {
             return (
               <button
@@ -66,7 +67,8 @@ export default function RecentWorks() {
           })}
         </div>
       </div>
-      <div className="flex flex-col gap-[40px]">
+      {/* Item of recent works */}
+      <div className="flex flex-col gap-[40px] md:flex-row md:flex-wrap justify-center items-center">
         {visibleWorks.map((work) => {
           return (
             <div
@@ -79,6 +81,7 @@ export default function RecentWorks() {
           );
         })}
       </div>
+      {/* See More... */}
       {hiddenProjectCount > 0 && (
         <div className="text-center">
           <button

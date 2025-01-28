@@ -11,8 +11,9 @@ import { LiaLinkedinIn } from "react-icons/lia";
 export default function Hero() {
   return (
     <div
-      className={`font-just-sans w-full flex pt-[40px] pb-[60px] flex-col gap-[40px] text-light px-[20px]`}
+      className={`md:px-[80px] lg:px-[120px] xl:px-[140px] font-just-sans w-full flex pt-[40px] pb-[60px] flex-col gap-[40px] text-light px-[30px]`}
     >
+      {/* Header */}
       <div>
         <div className={`text-[20px] font-semibold`}>Hey, I am Rhizal</div>
         <div
@@ -22,11 +23,13 @@ export default function Hero() {
           <div>Video Editor + Web Designer</div>
         </div>
       </div>
+      {/* Gambar Overlay itulah */}
       <div>
         <div className={`w-inherit text-[160px] font-semibold text-center`}>
           rhizal
         </div>
       </div>
+      {/* Deskription and CV download */}
       <div className={`text-[18px] font-light flex flex-col gap-[20px]`}>
         <p>
           I like making motion designs and editing videos to realize creative
@@ -36,7 +39,7 @@ export default function Hero() {
         <div>
           <button
             type="button"
-            className="group h-12 w-48 rounded-full p-[2px] bg-gradient-to-br from-normal to-dark-active hover:bg-[#161616] transition-all duration-300 active:scale-95"
+            className="text-[18px] group h-12 w-48 rounded-full p-[2px] bg-gradient-to-br from-normal to-dark-active hover:bg-[#161616] transition-all duration-300 active:scale-95"
           >
             <div className="flex gap-1 font-[600] bg-[#161616] w-full h-full items-center justify-center rounded-full group-hover:bg-transparent ease-in-out transition-all duration-300 group-active:bg-normal">
               <div className="bg-gradient-to-br from-normal to-dark-active text-transparent bg-clip-text group-hover:text-[#161616] transition-colors duration-300">
