@@ -45,6 +45,12 @@ body {
     background-color: var(--background);
     font-family: JustSans, sans-serif;
   }
+  .font-outline-2 {
+    -webkit-text-stroke: 2px #3FA2F6;
+  }
+  .font-outline-4 {
+    -webkit-text-stroke: 4px #3FA2F6;
+  }
 }
 
 h1{
@@ -69,13 +75,13 @@ h3{
 
 @property --myColor1 {
   syntax: '<color>';
-  initial-value: #3FA2F6;
+  initial-value: #3282C5;
   inherits: false;
 }
 
 @property --myColor2 {
   syntax: '<color>';
-  initial-value: #8FBDE4;
+  initial-value: #C3E2FC;
   inherits: false;
 }
 

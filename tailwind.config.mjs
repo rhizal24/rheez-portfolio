@@ -6,6 +6,15 @@ export default {
     "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
+    container: {
+      center: true,
+      padding: {
+        DEFAULT: "20px",
+        md: "40px",
+        lg: "100px",
+        xl: "80px",
+      },
+    },
     extend: {
       fontFamily: {
         "just-sans": ["var(--font-just-sans)", "sans"],
