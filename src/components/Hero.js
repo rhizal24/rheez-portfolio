@@ -15,32 +15,32 @@ const socialMedia = [
   {
     name: "Linkedin",
     path: "https://www.linkedin.com/in/muhammad-rhizal-rhomadon-2928752ba/",
-    icon: <LiaLinkedinIn />,
+    icon: <LiaLinkedinIn className="w-6 h-6 fill-dark  hover:fill-[#161616]" />,
   },
   {
     name: "Instagram",
     path: "https://instagram.com/rhizal.rh_",
-    icon: <FaInstagram />,
+    icon: <FaInstagram className="w-6 h-6 fill-dark  hover:fill-[#161616]" />,
   },
   {
     name: "Discord",
     path: "#",
-    icon: <FaDiscord />,
+    icon: <FaDiscord className="w-6 h-6 fill-dark  hover:fill-[#161616]" />,
   },
   {
     name: "Github",
     path: "https://github.com/rhizal24",
-    icon: <FaGithub />,
+    icon: <FaGithub className="w-6 h-6 fill-dark  hover:fill-[#161616]" />,
   },
   {
     name: "Youtube",
     path: "https://youtube.com/@rheez05",
-    icon: <FaYoutube />,
+    icon: <FaYoutube className="w-6 h-6 fill-dark  hover:fill-[#161616]" />,
   },
   {
     name: "Dribbble",
     path: "https://dribbble.com/rhizalrhoma",
-    icon: <FaDribbble />,
+    icon: <FaDribbble className="w-6 h-6 fill-dark  hover:fill-[#161616]" />,
   },
 ];
 
@@ -235,14 +235,14 @@ export default function Hero() {
                   </div>
                 </button>
               </div>
-              <div className="flex gap-4">
+              <div className="flex gap-3">
                 {socialMedia.map((social, index) => {
                   return (
                     <a
                       key={index}
                       href={social.path}
                       target="_blank"
-                      className="text-light hover:text-light-hover active:text-light-active transition-all duration-300 ease-in-out active:scale-95"
+                      className="border-dark border-2 p-[6px] rounded-full hover:bg-dark easy-in-out transition-all duration-300 active:bg-normal active:scale-90"
                     >
                       {social.icon}
                     </a>
