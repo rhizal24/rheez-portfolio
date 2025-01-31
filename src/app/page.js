@@ -11,7 +11,7 @@ import Navbar from "../components/Navbar.js";
 export default function Home() {
   return (
     <main className="font-just-sans">
-      <nav className="fixed w-full z-10">
+      <nav className="fixed w-full z-20">
         <Navbar />
       </nav>
       <section className="pt-24">

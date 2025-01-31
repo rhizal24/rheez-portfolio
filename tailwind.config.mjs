@@ -11,8 +11,9 @@ export default {
       padding: {
         DEFAULT: "20px",
         md: "40px",
-        lg: "100px",
+        lg: "95px",
         xl: "80px",
+        "2xl": "40px",
       },
     },
     extend: {

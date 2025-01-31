@@ -59,14 +59,21 @@ h1{
 }
 
 h2{
-  font-size: 12px;
+  font-size: 35px;
+  font-weight: 800;
+}
+
+h5{
+  font-size: 14px;
   font-weight: 200;
 }
 
-h3{
+h4{
   font-size: 20px;
   font-weight: 500;
 }
+
+
 
 #input-message{
   background: #1b1b1b;
