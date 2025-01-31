@@ -77,7 +77,7 @@ export default function Navbar() {
     // </div>
     // #Revisi aowkawok
     <header className="w-full py-2 pr-2 bg-normal/15 backdrop-blur-lg border-b-[1px] border-normal/20">
-      <div className="container">
+      <div className="container transition-all ease-in-out">
         <div className="flex justify-between items-center">
           {/* Logo and Name */}
           <div className="flex items-center">
@@ -88,12 +88,14 @@ export default function Navbar() {
               height={100}
               className="w-16 h-16"
             />
-            <h1 className="text-[19px]">rheezmotion</h1>
-            <h1 className="text-normal text-[19px]">.</h1>
+            <h1 className="transition-all duration-700 text-[19px] xl:text-[25px]">
+              rheezmotion
+            </h1>
+            <h1 className="text-normal text-[19px] xl:text-[25px]">.</h1>
           </div>
           <div className="2xl:gap-9 xl:gap-7 flex items-center gap-5">
             {/* Navbar */}
-            <nav className="xl:text-[16px] 2xl:gap-9 xl:gap-7 hidden lg:flex gap-5 items-center justify-center text-[14px]">
+            <nav className="xl:text-[16px] 2xl:gap-9 xl:gap-7 hidden lg:flex gap-5 items-center justify-center text-[14px] transition-all duration-600 ease-in-out">
               {Menu.map((menu, index) => {
                 return (
                   <a
