@@ -25,7 +25,7 @@ export default function About() {
     // </div>
     <section className="bg-[#2f2f2f]/40">
       <div className="container transition-all duration-600 ease-in-out">
-        <div className="w-full px-4 flex flex-col justify-center items-center text-light py-28 gap-16">
+        <div className="w-full px-4 flex flex-col justify-center items-center text-light py-28 gap-14">
           <div className="flex flex-col justify-center items-center">
             <h2 className="lg:text-[45px] xl:text-[55px] bg-gradient-to-tl from-normal to-light text-transparent bg-clip-text transition-all duration-700 ease-in-out">
               About Me
@@ -34,7 +34,7 @@ export default function About() {
               Hello, the below picture is me!!!
             </h5>
           </div>
-          <div className="xl:flex-row w-full flex flex-col gap-16 justify-center items-center xl:gap-20">
+          <div className="xl:flex-row w-full flex flex-col gap-14 justify-center items-center xl:gap-20">
             <Image
               src="/about/fotoAbout.svg"
               alt="About Rhizal"

@@ -202,7 +202,7 @@ export default function Hero() {
                         <div>
                           <IoMdDownload
                             size={20}
-                            className="fill-dark-active group-hover:fill-[#161616] w-6 h-auto easy-in-out transition-all duration-300"
+                            className="fill-dark group-hover:fill-[#161616] w-6 h-auto easy-in-out transition-all duration-300"
                           />
                         </div>
                       </div>
@@ -238,13 +238,17 @@ export default function Hero() {
                 />
               </div>
               {/* Foreground Photo */}
-              <div className="relative z-10 flex items-center justify-center">
+              <div
+                className="relative z-10 flex items-center justify-center"
+                id="heroImage"
+              >
                 <Image
                   src="/hero/foto.svg"
                   alt="Rhizal"
+                  id="rotate"
                   width={160}
                   height={160}
-                  className="w-[250px] lg:w-[300px] 2xl:w-[330px] h-auto rotate-2 transition-all duration-700 ease-in-out"
+                  className="-[250px] lg:w-[300px] 2xl:w-[330px] h-auto rotate-3 transition-all duration-700 ease-in-out"
                 />
               </div>
             </div>
@@ -262,10 +266,14 @@ export default function Hero() {
               />
             </div>
             {/* Foreground Photo */}
-            <div className="relative z-10 flex items-center justify-center">
+            <div
+              className="relative z-10 flex items-center justify-center"
+              id="heroImage"
+            >
               <Image
                 src="/hero/foto.svg"
                 alt="Rhizal"
+                id="rotate"
                 width={160}
                 height={160}
                 className="w-[250px] md:w-[300px] lg:w-[350px] h-auto rotate-2 transition-all duration-700 ease-in-out"
