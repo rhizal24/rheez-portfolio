@@ -11,10 +11,10 @@ import Navbar from "../components/Navbar.js";
 export default function Home() {
   return (
     <main className="font-just-sans">
-      <nav className="fixed w-full z-20">
+      <nav className="fixed w-full z-50">
         <Navbar />
       </nav>
-      <section className="pt-24">
+      <section className="pt-12">
         <HeroSection />
         <About />
         <Services />

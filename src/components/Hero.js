@@ -175,9 +175,9 @@ export default function Hero() {
           <div className="w-full flex justify-center">
             {/* Header Hero */}
             <div className="w-full xl:w-[70%] 2xl:w-[60%]">
-              <h3 className="text-light lg:text-[26px] xl:text-[36px] transition-all duration-700 ease-in-out">
+              <h4 className="text-light lg:text-[26px] xl:text-[36px] transition-all duration-700 ease-in-out">
                 Hey, I am Rhizal
-              </h3>
+              </h4>
               <h1 className="w-full md:w-[80%] xl:w-full lg:text-[38px] xl:text-[48px] bg-gradient-to-br from-normal to-light bg-clip-text text-transparent text-[32px] font-extrabold transition-all duration-700">
                 Motion Designer + Video Editor + FrontEnd Developer
               </h1>
