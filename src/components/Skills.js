@@ -102,7 +102,19 @@ export default function Skills() {
     //   </div>
     // </div>
     <section>
-      <div className="container"></div>
+      <div className="container">
+        <div className="w-full flex flex-col justify-center items-center gap-14 px-4 py-28">
+          <div className="flex flex-col justify-center items-center">
+            <h2 className="lg:text-[45px] xl:text-[55px] bg-gradient-to-br from-normal to-light text-transparent bg-clip-text transition-all duration-700 ease-in-out">
+              My Skills
+            </h2>
+            <h5 className="lg:w-[80%] lg:text-[18px] md:w-[65%] transition-all duration-700 ease-in-out w-[95%] xl:w-[65%] text-center">
+              Below are the skills and expertise that I have and have developed
+              to date through the experience that I have.
+            </h5>
+          </div>
+        </div>
+      </div>
     </section>
   );
 }
