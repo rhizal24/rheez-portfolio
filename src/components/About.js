@@ -23,7 +23,7 @@ export default function About() {
     //     </p>
     //   </div>
     // </div>
-    <section className="bg-[#2f2f2f]/40">
+    <section className="bg-[#2f2f2f]/40" id="about">
       <div className="container transition-all duration-600 ease-in-out">
         <div className="w-full px-4 flex flex-col justify-center items-center text-light py-28 gap-14">
           <div className="flex flex-col justify-center items-center">

@@ -79,7 +79,7 @@ export default function Services() {
     //     })}
     //   </div>
     // </div>
-    <section>
+    <section id="services" name="services">
       <div className="container transition-all duration-600 ease-in-out">
         <div className="w-full flex justify-center flex-col items-center py-28 px-4 gap-14">
           <div className="flex justify-center items-center flex-col">

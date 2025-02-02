@@ -139,7 +139,7 @@ export default function RecentWorks() {
   const hiddenProjectCount = filteredWorks.length - visibleWorks.length;
 
   return (
-    <section className="bg-[#2f2f2f]/40">
+    <section className="bg-[#2f2f2f]/40" id="works">
       <div className="container transition-all duration-600 ease-in-out">
         <div className="w-full flex flex-col gap-8 px-4 py-28">
           {/* Header */}
@@ -214,7 +214,7 @@ export default function RecentWorks() {
           </div>
 
           {/* See More... */}
-          {hiddenProjectCount > 0 && (
+          {(hiddenProjectCount > 0 || showAll) && (
             <div className="text-center">
               <button
                 type="button"

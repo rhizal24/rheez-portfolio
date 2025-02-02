@@ -7,25 +7,28 @@ import Skills from "../components/Skills.js";
 import Message from "../components/Message.js";
 import Footer from "../components/Footer.js";
 import Navbar from "../components/Navbar.js";
+import ScrollContext from "../components/SmoothScroll.js";
 
 export default function Home() {
   return (
-    <main className="font-just-sans">
-      <nav className="fixed w-full z-50">
-        <Navbar />
-      </nav>
-      <section className="pt-12">
-        <HeroSection />
-        <About />
-        <Services />
-        <RecentWorks />
-        <EduXExp />
-        <Skills />
-        <Message />
-      </section>
-      <footer>
-        <Footer />
-      </footer>
-    </main>
+    <ScrollContext>
+      <main className="font-just-sans">
+        <nav className="fixed w-full z-50">
+          <Navbar />
+        </nav>
+        <section className="pt-12">
+          <HeroSection />
+          <About />
+          <Services />
+          <RecentWorks />
+          <EduXExp />
+          <Skills />
+          <Message />
+        </section>
+        <footer>
+          <Footer />
+        </footer>
+      </main>
+    </ScrollContext>
   );
 }

@@ -3,27 +3,27 @@ import Image from "next/image";
 const Menu = [
   {
     title: "Home",
-    path: "#",
+    path: "#hero",
   },
   {
     title: "About",
-    path: "#",
+    path: "#about",
   },
   {
     title: "Services",
-    path: "#",
+    path: "#services",
   },
   {
     title: "Works",
-    path: "#",
+    path: "#works",
   },
   {
     title: "Education",
-    path: "#",
+    path: "#education",
   },
   {
     title: "Skills",
-    path: "#",
+    path: "#skills",
   },
 ];
 
@@ -80,7 +80,7 @@ export default function Navbar() {
       <div className="container transition-all ease-in-out">
         <div className="flex justify-between items-center">
           {/* Logo and Name */}
-          <div className="flex items-center">
+          <a className="flex items-center" href="#hero">
             <Image
               src={"./icon/rheez.svg"}
               alt="Rheez Logo"
@@ -92,7 +92,7 @@ export default function Navbar() {
               rheezmotion
             </h1>
             <h1 className="text-normal text-[19px] xl:text-[25px]">.</h1>
-          </div>
+          </a>
           <div className="2xl:gap-9 xl:gap-7 flex items-center gap-5">
             {/* Navbar */}
             <nav className="xl:text-[16px] 2xl:gap-9 xl:gap-7 hidden lg:flex gap-5 items-center justify-center text-[14px] transition-all duration-600 ease-in-out">
@@ -101,7 +101,7 @@ export default function Navbar() {
                   <a
                     key={index}
                     href={menu.path}
-                    className="font-light text-light hover:text-light-hover active:text-light-active transition-all duration-300 ease-in-out active:scale-95"
+                    className="text-opacity-75 hover:text-opacity-100 font-light text-light hover:text-light-hover active:text-light-active transition-all duration-300 ease-in-out active:scale-95"
                   >
                     {menu.title}
                   </a>
@@ -109,12 +109,13 @@ export default function Navbar() {
               })}
             </nav>
             {/* Button */}
-            <button
+            <a
               type="button"
+              href="#message"
               className="xl:text-[14px] my-button text-white py-[7px] px-[22px] border-[1.5px] border-normal rounded-full transition-all duration-300 ease-in-out active:scale-95 text-[12px] font-normal tracking-wide active:bg-darker hover:text-light-hover"
             >
               <div>Hire Me!</div>
-            </button>
+            </a>
             {/* Burger */}
             <button
               button="button"

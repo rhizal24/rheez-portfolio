@@ -12,47 +12,49 @@ import CountUp from "./CountUp/CountUp";
 const Categories = [
   {
     icon: (
-      <SiAdobeaftereffects className="md:w-[50] md:h-[50] w-10 h-10 fill-normal" />
+      <SiAdobeaftereffects className="xl:w-[70px] xl:h-[70px] md:w-[50px] md:h-[50px] w-10 h-10 fill-normal" />
     ),
     level: "100%",
     softwareName: "After Effects",
   },
   {
     icon: (
-      <SiAdobepremierepro className="md:w-[50] md:h-[50] w-10 h-10 fill-normal" />
+      <SiAdobepremierepro className="xl:w-[70px] xl:h-[70px] md:w-[50px] md:h-[50px] w-10 h-10 fill-normal" />
     ),
     level: "100%",
     softwareName: "Premier Pro",
   },
   {
     icon: (
-      <SiDavinciresolve className="md:w-[50] md:h-[50] w-10 h-10 fill-normal" />
+      <SiDavinciresolve className="xl:w-[70px] xl:h-[70px] md:w-[50px] md:h-[50px] w-10 h-10 fill-normal" />
     ),
     level: "90%",
     softwareName: "Davinci Resolve",
   },
   {
-    icon: <SiFigma className="md:w-[50] md:h-[50] w-10 h-10 fill-normal" />,
+    icon: (
+      <SiFigma className="xl:w-[70px] xl:h-[70px] md:w-[50px] md:h-[50px] w-10 h-10 fill-normal" />
+    ),
     level: "98%",
     softwareName: "Figma",
   },
   {
     icon: (
-      <SiAdobeillustrator className="md:w-[50] md:h-[50] w-10 h-10 fill-normal" />
+      <SiAdobeillustrator className="xl:w-[70px] xl:h-[70px] md:w-[50px] md:h-[50px] w-10 h-10 fill-normal" />
     ),
     level: "90%",
     softwareName: "Adobe Illustrator",
   },
   {
     icon: (
-      <SiAdobephotoshop className="md:w-[50] md:h-[50] w-10 h-10 fill-normal" />
+      <SiAdobephotoshop className="xl:w-[70px] xl:h-[70px] md:w-[50px] md:h-[50px] w-10 h-10 fill-normal" />
     ),
     level: "80%",
     softwareName: "Photoshop",
   },
   {
     icon: (
-      <SiJavascript className="md:w-[50] md:h-[50] w-10 h-10 fill-normal" />
+      <SiJavascript className="xl:w-[70px] xl:h-[70px] md:w-[50px] md:h-[50px] w-10 h-10 fill-normal" />
     ),
     level: "80%",
     softwareName: "JavaScript",
@@ -101,9 +103,9 @@ export default function Skills() {
     //     })}
     //   </div>
     // </div>
-    <section>
-      <div className="container">
-        <div className="w-full flex flex-col justify-center items-center gap-14 px-4 py-28">
+    <section className="bg-[#2f2f2f]/40" id="skills">
+      <div className="container transition-all duration-600 ease-in-out">
+        <div className="w-full flex flex-col justify-center items-center gap-10 px-4 py-28">
           <div className="flex flex-col justify-center items-center">
             <h2 className="lg:text-[45px] xl:text-[55px] bg-gradient-to-br from-normal to-light text-transparent bg-clip-text transition-all duration-700 ease-in-out">
               My Skills
@@ -112,6 +114,29 @@ export default function Skills() {
               Below are the skills and expertise that I have and have developed
               to date through the experience that I have.
             </h5>
+          </div>
+          <div className="flex flex-wrap gap-4 justify-center items-center xl:gap-6">
+            {Categories.map((item) => {
+              return (
+                <div
+                  className="xl:text-[16px] xl:w-[200px] md:rounded-[15px] xl:h-[240px] md:w-[160px] md:h-[180px] md:text-[12px] text-[9px] flex flex-col justify-center items-center bg-normal/20 w-[125px] h-[145px] rounded-[11px] gap-1 border-[1px] border-normal/20 transition-all duration-700 ease-in-out"
+                  key={item.softwareName}
+                >
+                  <div>{item.icon}</div>
+                  <div className="pt-2 font-light">
+                    <CountUp
+                      from={0}
+                      to={item.level}
+                      separator=","
+                      duration={1}
+                      className="count-up-text"
+                    />
+                    %
+                  </div>
+                  <div className="text-normal">{item.softwareName}</div>
+                </div>
+              );
+            })}
           </div>
         </div>
       </div>

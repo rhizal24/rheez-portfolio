@@ -15,6 +15,7 @@ const Education = [
     url: "https://sman1berau.sch.id/info/",
   },
 ];
+
 const Experience = [
   {
     range: "Jan 2024 - Now",
@@ -60,59 +61,13 @@ const Experience = [
   },
 ];
 
-// const [showAll, setShowAll] = useState();
-// const visibleWorks = useState(showAll ? Experience : Experience.slice(0, 2));
-// const hiddenExperience = Experience.length - visibleWorks.length;
-
 export default function EduXExp() {
+  const [showAll, setShowAll] = useState(false);
+  const visibleExperiences = showAll ? Experience : Experience.slice(0, 2);
+  const hiddenExperienceCount = Experience.length - visibleExperiences.length;
+
   return (
-    // <div className="lg:flex-row lg:items-start font-just-sans w-full flex py-[40px] flex-col gap-[40px] justify-center items-center text-light bg-[#161616] px-[30px]">
-    //   <div className="flex flex-col justify-center items-center gap-[20px]">
-    //     <h1 className="md:text-[35px] bg-gradient-to-br from-normal to-light text-transparent bg-clip-text">
-    //       My Education
-    //     </h1>
-    //     <div className="flex flex-col gap-[20px]">
-    //       {Education.map((item, index) => {
-    //         return (
-    //           <div
-    //             key={index}
-    //             className="bg-normal bg-opacity-25 rounded-[12px] border-normal border-2 w-[400px] flex flex-col py-3 px-4"
-    //           >
-    //             <h2 className="text-[13px] font-medium text-normal">
-    //               {item.range}
-    //             </h2>
-    //             <h3 className="">{item.from}</h3>
-    //             <p className="text-[10px] font-thin">{item.major}</p>
-    //           </div>
-    //         );
-    //       })}
-    //     </div>
-    //   </div>
-    //   <div className="flex flex-col gap-[20px] justify-center items-center">
-    //     <h1 className="md:text-[35px] bg-gradient-to-tl from-normal to-light text-transparent bg-clip-text">
-    //       My Experience
-    //     </h1>
-    //     <div>
-    //       {Experience.map((item, index) => {
-    //         return (
-    //           <div
-    //             key={index}
-    //             className="bg-normal bg-opacity-25 rounded-[12px] border-normal border-2 w-[400px] flex flex-col py-3 px-4"
-    //           >
-    //             <h2 className="text-[13px] font-medium text-normal">
-    //               {item.range}
-    //             </h2>
-    //             <h3 className="">{item.company}</h3>
-    //             <p className="text-[10px] font-thin">
-    //               {item.status} - {item.position}
-    //             </p>
-    //           </div>
-    //         );
-    //       })}
-    //     </div>
-    //   </div>
-    // </div>
-    <section>
+    <section id="education">
       <div className="container transition-all duration-600 ease-in-out">
         <div className="xl:items-start w-full flex flex-col xl:flex-row justify-center items-center py-28 gap-10">
           <div className="xl:w-[50%] flex flex-col justify-center items-center gap-8 transition-all duration-700 ease-in-out">
@@ -124,7 +79,7 @@ export default function EduXExp() {
                 return (
                   <div
                     key={index}
-                    className="hover:scale-105 2xl:w-[565px] xl:w-[510px] lg:px-5 lg:py-4 lg:w-[500px] bg-normal/25 rounded-[12px] border-normal border-2 w-[410px] flex flex-col py-3 px-4 justify-center items-start transition-all duration-700 ease-in-out"
+                    className="lg:rounded-[15px] hover:scale-105 2xl:w-[565px] xl:w-[510px] lg:px-5 lg:py-4 lg:w-[500px] bg-normal/25 rounded-[12px] border-normal border-2 w-[410px] flex flex-col py-3 px-4 justify-center items-start transition-all duration-700 ease-in-out"
                   >
                     <h3 className="xl:text-[22px] lg:text-[20px] text-[14px] font-semibold text-normal transition-all duration-300 ease-in-out">
                       {item.range}
@@ -149,11 +104,11 @@ export default function EduXExp() {
               My Experience
             </h2>
             <div className="flex flex-wrap gap-8 justify-center items-center">
-              {Experience.map((item, index) => {
+              {visibleExperiences.map((item, index) => {
                 return (
                   <div
                     key={index}
-                    className="2xl:w-[565px] xl:w-[510px] lg:px-5 lg:py-4 lg:w-[500px] bg-normal/25 rounded-[12px] border-normal border-2 w-[410px] flex flex-col py-3 px-4 justify-center items-start transition-all duration-700 ease-in-out hover:scale-105"
+                    className="lg:rounded-[15px] 2xl:w-[565px] xl:w-[510px] lg:px-5 lg:py-4 lg:w-[500px] bg-normal/25 rounded-[12px] border-normal border-2 w-[410px] flex flex-col py-3 px-4 justify-center items-start transition-all duration-700 ease-in-out hover:scale-105"
                   >
                     <h3 className="xl:text-[22px] lg:text-[20px] text-[14px] font-semibold text-normal transition-all duration-300 ease-in-out">
                       {item.range}
@@ -172,6 +127,14 @@ export default function EduXExp() {
                 );
               })}
             </div>
+            {Experience.length > 2 && (
+              <button
+                onClick={() => setShowAll(!showAll)}
+                className="hover:text-light hover:underline hover:scale-105 bg-gradient-to-tl from-light to-normal-active bg-clip-text text-transparent px-6 py-2 rounded-lg transition-all duration-300 active:scale-95 lg:text-[18px]"
+              >
+                {showAll ? "See Less" : `See More...(${hiddenExperienceCount})`}
+              </button>
+            )}
           </div>
         </div>
       </div>

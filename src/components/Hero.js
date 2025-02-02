@@ -11,6 +11,7 @@ import {
 import { LiaLinkedinIn } from "react-icons/lia";
 import { Section } from "lucide-react";
 import Image from "next/image";
+import { motion } from "motion/react";
 
 const socialMedia = [
   {
@@ -168,7 +169,7 @@ export default function Hero() {
     //     </ul>
     //   </div>
     // </div>
-    <section>
+    <section id="hero" name="Hero">
       <div className="container transition-all duration-600 ease-in-out">
         <div className="flex flex-wrap justify-center px-4 gap-14 text-light py-28">
           {/* Header */}
@@ -301,7 +302,7 @@ export default function Hero() {
                     <div>
                       <IoMdDownload
                         size={20}
-                        className="fill-dark-active group-hover:fill-[#161616] w-5 h-auto easy-in-out transition-all duration-300"
+                        className="fill-dark group-hover:fill-[#161616] w-5 h-auto easy-in-out transition-all duration-300"
                       />
                     </div>
                   </div>
