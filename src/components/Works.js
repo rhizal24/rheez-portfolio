@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import { useState } from "react";
+import Animation from "../components/ScrollAnimation.js";
 
 export default function RecentWorks() {
   const works = [
@@ -144,87 +145,95 @@ export default function RecentWorks() {
         <div className="w-full flex flex-col gap-8 px-4 py-28">
           {/* Header */}
           <div className="flex flex-col justify-center items-center gap-2">
-            <h2 className="lg:text-[45px] xl:text-[55px] bg-gradient-to-tl from-normal to-light text-transparent bg-clip-text transition-all duration-700 ease-in-out">
-              My Recent Works
-            </h2>
+            <Animation delay={0}>
+              <h2 className="lg:text-[45px] xl:text-[55px] bg-gradient-to-tl from-normal to-light text-transparent bg-clip-text transition-all duration-700 ease-in-out">
+                My Recent Works
+              </h2>
+            </Animation>
             <div className="flex text-[12px] md:text-[14px] lg:text-[16px] xl:text-[18px] transition-all duration-700 ease-in-out">
-              {categories.map((category) => (
-                <button
-                  type="button"
-                  onClick={() => handleFilterChange(category)}
-                  key={category}
-                  className={`relative px-3 py-1 rounded-full transition-all duration-300 ease-in-out ${
-                    activeFilter === category
-                      ? "bg-gradient-to-br from-normal to-dark-hover"
-                      : "bg-transparent"
-                  } ${
-                    activeFilter === category
-                      ? "border-[1px] border-normal"
-                      : "border-none"
-                  }`}
-                  style={{
-                    transform:
-                      activeFilter === category ? "scale(1)" : "scale(0.95)",
-                    opacity: activeFilter === category ? 1 : 0.7,
-                  }}
-                >
-                  <span
-                    className={`absolute inset-0 rounded-full transition-all duration-300 ${
+              <Animation delay={0.1}>
+                {categories.map((category) => (
+                  <button
+                    type="button"
+                    onClick={() => handleFilterChange(category)}
+                    key={category}
+                    className={`relative px-3 py-1 rounded-full transition-all duration-300 ease-in-out ${
                       activeFilter === category
                         ? "bg-gradient-to-br from-normal to-dark-hover"
                         : "bg-transparent"
+                    } ${
+                      activeFilter === category
+                        ? "border-[1px] border-normal"
+                        : "border-none"
                     }`}
-                  />
-                  <span className="relative z-10">{category}</span>
-                </button>
-              ))}
+                    style={{
+                      transform:
+                        activeFilter === category ? "scale(1)" : "scale(0.95)",
+                      opacity: activeFilter === category ? 1 : 0.7,
+                    }}
+                  >
+                    <span
+                      className={`absolute inset-0 rounded-full transition-all duration-300 ${
+                        activeFilter === category
+                          ? "bg-gradient-to-br from-normal to-dark-hover"
+                          : "bg-transparent"
+                      }`}
+                    />
+                    <span className="relative z-10">{category}</span>
+                  </button>
+                ))}
+              </Animation>
             </div>
           </div>
 
           {/* Item of recent works */}
           <div className="flex flex-col gap-10 md:flex-row md:flex-wrap justify-center items-center">
             {visibleWorks.map((work) => (
-              <a
-                key={work.id}
-                href={work.url}
-                target="_blank"
-                className="relative w-[410px] h-[230px] flex flex-col justify-center items-center hover:scale-105 transition-all duration-300 ease-in-out active:scale-95"
-              >
-                <div className="absolute rounded-[15px] overflow-hidden">
-                  <Image
-                    src={work.thumbnail}
-                    alt={work.title}
-                    width={900}
-                    height={800}
-                    className="blur-[3px]"
-                  />
-                </div>
-                <div className="absolute text-light w-full h-full border-2 border-normal bg-transparent rounded-[15px] z-10"></div>
-                <div className="absolute text-light w-full h-full bg-gradient-to-br from-normal/20 to-darker/20 rounded-[15px] z-10"></div>
-                <div className="text-light flex items-center justify-center flex-col z-30">
-                  <h1 className="text-center text-light hover:text-light-active transition-all duration-300 ease-in-out hover:underline active:scale-95">
-                    {work.title}
-                  </h1>
-                  <p className="text-center font-normal text-light hover:text-light-active transition-all duration-300 ease-in-out hover:underline active:scale-95">
-                    {work.years}
-                  </p>
-                </div>
-              </a>
+              <Animation delay={0.2} key={work.id}>
+                <a
+                  key={work.id}
+                  href={work.url}
+                  target="_blank"
+                  className="relative w-[410px] h-[230px] flex flex-col justify-center items-center hover:scale-105 transition-all duration-300 ease-in-out active:scale-95"
+                >
+                  <div className="absolute rounded-[15px] overflow-hidden">
+                    <Image
+                      src={work.thumbnail}
+                      alt={work.title}
+                      width={900}
+                      height={800}
+                      className="blur-[3px]"
+                    />
+                  </div>
+                  <div className="absolute text-light w-full h-full border-2 border-normal bg-transparent rounded-[15px] z-10"></div>
+                  <div className="absolute text-light w-full h-full bg-gradient-to-br from-normal/20 to-darker/20 rounded-[15px] z-10"></div>
+                  <div className="text-light flex items-center justify-center flex-col z-30">
+                    <h1 className="text-center text-light hover:text-light-active transition-all duration-300 ease-in-out hover:underline active:scale-95">
+                      {work.title}
+                    </h1>
+                    <p className="text-center font-normal text-light hover:text-light-active transition-all duration-300 ease-in-out hover:underline active:scale-95">
+                      {work.years}
+                    </p>
+                  </div>
+                </a>
+              </Animation>
             ))}
           </div>
 
           {/* See More... */}
-          {(hiddenProjectCount > 0 || showAll) && (
-            <div className="text-center">
-              <button
-                type="button"
-                onClick={() => setShowAll(!showAll)}
-                className="hover:text-light hover:underline hover:scale-105 bg-gradient-to-br from-light to-normal-active bg-clip-text text-transparent px-6 py-2 rounded-lg transition-all duration-300 active:scale-95 lg:text-[18px]"
-              >
-                {showAll ? "Show Less" : `See More...(${hiddenProjectCount})`}
-              </button>
-            </div>
-          )}
+          <Animation delay={0}>
+            {(hiddenProjectCount > 0 || showAll) && (
+              <div className="text-center">
+                <button
+                  type="button"
+                  onClick={() => setShowAll(!showAll)}
+                  className="hover:text-light hover:underline hover:scale-105 bg-gradient-to-br from-light to-normal-active bg-clip-text text-transparent px-6 py-2 rounded-lg transition-all duration-300 active:scale-95 lg:text-[18px]"
+                >
+                  {showAll ? "Show Less" : `See More...(${hiddenProjectCount})`}
+                </button>
+              </div>
+            )}
+          </Animation>
         </div>
       </div>
     </section>

@@ -1,5 +1,6 @@
 "use client";
 import { useState } from "react";
+import Animation from "../components/ScrollAnimation.js";
 
 const Education = [
   {
@@ -71,70 +72,80 @@ export default function EduXExp() {
       <div className="container transition-all duration-600 ease-in-out">
         <div className="xl:items-start w-full flex flex-col xl:flex-row justify-center items-center py-28 gap-10">
           <div className="xl:w-[50%] flex flex-col justify-center items-center gap-8 transition-all duration-700 ease-in-out">
-            <h2 className="xl:text-left lg:text-[45px] xl:text-[48px] bg-gradient-to-br from-normal to-light text-transparent bg-clip-text transition-all duration-700 ease-in-out ">
-              My Education
-            </h2>
+            <Animation delay={0}>
+              <h2 className="xl:text-left lg:text-[45px] xl:text-[48px] bg-gradient-to-br from-normal to-light text-transparent bg-clip-text transition-all duration-700 ease-in-out ">
+                My Education
+              </h2>
+            </Animation>
             <div className="flex flex-wrap gap-8 justify-center items-center">
               {Education.map((item, index) => {
                 return (
-                  <div
-                    key={index}
-                    className="lg:rounded-[15px] hover:scale-105 2xl:w-[565px] xl:w-[510px] lg:px-5 lg:py-4 lg:w-[500px] bg-normal/25 rounded-[12px] border-normal border-2 w-[410px] flex flex-col py-3 px-4 justify-center items-start transition-all duration-700 ease-in-out"
-                  >
-                    <h3 className="xl:text-[22px] lg:text-[20px] text-[14px] font-semibold text-normal transition-all duration-300 ease-in-out">
-                      {item.range}
-                    </h3>
-                    <a
-                      className="text-[22px] font-semibold xl:text-[29px] lg:text-[27px] transition-all duration-300 ease-in-out cursor-pointer hover:text-light-hover hover:underline active:scale-95 active:text-light-active"
-                      href={item.url}
-                      target="_blank"
+                  <Animation delay={0.2} key={index}>
+                    <div
+                      key={index}
+                      className="lg:rounded-[15px] hover:scale-105 2xl:w-[565px] xl:w-[510px] lg:px-5 lg:py-4 lg:w-[500px] bg-normal/25 rounded-[12px] border-normal border-2 w-[410px] flex flex-col py-3 px-4 justify-center items-start transition-all duration-700 ease-in-out"
                     >
-                      {item.from}
-                    </a>
-                    <p className="xl:text-[14px] lg:text-[13px] text-[10px] font-thin transition-all duration-300 ease-in-out ">
-                      {item.major}
-                    </p>
-                  </div>
+                      <h3 className="xl:text-[22px] lg:text-[20px] text-[14px] font-semibold text-normal transition-all duration-300 ease-in-out">
+                        {item.range}
+                      </h3>
+                      <a
+                        className="text-[22px] font-semibold xl:text-[29px] lg:text-[27px] transition-all duration-300 ease-in-out cursor-pointer hover:text-light-hover hover:underline active:scale-95 active:text-light-active"
+                        href={item.url}
+                        target="_blank"
+                      >
+                        {item.from}
+                      </a>
+                      <p className="xl:text-[14px] lg:text-[13px] text-[10px] font-thin transition-all duration-300 ease-in-out ">
+                        {item.major}
+                      </p>
+                    </div>
+                  </Animation>
                 );
               })}
             </div>
           </div>
           <div className="flex flex-col gap-8 xl:w-[50%] justify-center items-center">
-            <h2 className="lg:text-[45px] xl:text-[48px] bg-gradient-to-tl from-normal to-light text-transparent bg-clip-text transition-all duration-700 ease-in-out">
-              My Experience
-            </h2>
+            <Animation delay={0}>
+              <h2 className="lg:text-[45px] xl:text-[48px] bg-gradient-to-tl from-normal to-light text-transparent bg-clip-text transition-all duration-700 ease-in-out">
+                My Experience
+              </h2>
+            </Animation>
+
             <div className="flex flex-wrap gap-8 justify-center items-center">
               {visibleExperiences.map((item, index) => {
                 return (
-                  <div
-                    key={index}
-                    className="lg:rounded-[15px] 2xl:w-[565px] xl:w-[510px] lg:px-5 lg:py-4 lg:w-[500px] bg-normal/25 rounded-[12px] border-normal border-2 w-[410px] flex flex-col py-3 px-4 justify-center items-start transition-all duration-700 ease-in-out hover:scale-105"
-                  >
-                    <h3 className="xl:text-[22px] lg:text-[20px] text-[14px] font-semibold text-normal transition-all duration-300 ease-in-out">
-                      {item.range}
-                    </h3>
-                    <a
-                      className="text-[22px] font-semibold xl:text-[29px] lg:text-[27px] transition-all duration-300 ease-in-out cursor-pointer hover:text-light-hover hover:underline active:scale-95 active:text-light-active"
-                      target="_blank"
-                      href={item.url}
-                    >
-                      {item.company}
-                    </a>
-                    <p className="xl:text-[14px] lg:text-[13px] text-[10px] font-thin transition-all duration-300 ease-in-out">
-                      {item.status} - {item.position}
-                    </p>
-                  </div>
+                  <Animation delay={0.2} key={index}>
+                    <div className="lg:rounded-[15px] 2xl:w-[565px] xl:w-[510px] lg:px-5 lg:py-4 lg:w-[500px] bg-normal/25 rounded-[12px] border-normal border-2 w-[410px] flex flex-col py-3 px-4 justify-center items-start transition-all duration-700 ease-in-out hover:scale-105">
+                      <h3 className="xl:text-[22px] lg:text-[20px] text-[14px] font-semibold text-normal transition-all duration-300 ease-in-out">
+                        {item.range}
+                      </h3>
+                      <a
+                        className="text-[22px] font-semibold xl:text-[29px] lg:text-[27px] transition-all duration-300 ease-in-out cursor-pointer hover:text-light-hover hover:underline active:scale-95 active:text-light-active"
+                        target="_blank"
+                        href={item.url}
+                      >
+                        {item.company}
+                      </a>
+                      <p className="xl:text-[14px] lg:text-[13px] text-[10px] font-thin transition-all duration-300 ease-in-out">
+                        {item.status} - {item.position}
+                      </p>
+                    </div>
+                  </Animation>
                 );
               })}
             </div>
-            {Experience.length > 2 && (
-              <button
-                onClick={() => setShowAll(!showAll)}
-                className="hover:text-light hover:underline hover:scale-105 bg-gradient-to-tl from-light to-normal-active bg-clip-text text-transparent px-6 py-2 rounded-lg transition-all duration-300 active:scale-95 lg:text-[18px]"
-              >
-                {showAll ? "See Less" : `See More...(${hiddenExperienceCount})`}
-              </button>
-            )}
+            <Animation>
+              {Experience.length > 2 && (
+                <button
+                  onClick={() => setShowAll(!showAll)}
+                  className="hover:text-light hover:underline hover:scale-105 bg-gradient-to-tl from-light to-normal-active bg-clip-text text-transparent px-6 py-2 rounded-lg transition-all duration-300 active:scale-95 lg:text-[18px]"
+                >
+                  {showAll
+                    ? "See Less"
+                    : `See More...(${hiddenExperienceCount})`}
+                </button>
+              )}
+            </Animation>
           </div>
         </div>
       </div>

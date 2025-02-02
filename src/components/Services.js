@@ -3,6 +3,7 @@ import { FaComputer } from "react-icons/fa6";
 import { CgWebsite } from "react-icons/cg";
 import Image from "next/image";
 import Arrow from "./arrow.js";
+import Animation from "../components/ScrollAnimation.js";
 
 const servicesData = [
   {
@@ -83,37 +84,43 @@ export default function Services() {
       <div className="container transition-all duration-600 ease-in-out">
         <div className="w-full flex justify-center flex-col items-center py-28 px-4 gap-14">
           <div className="flex justify-center items-center flex-col">
-            <h2 className="lg:text-[45px] xl:text-[55px] bg-gradient-to-br from-normal to-light text-transparent bg-clip-text transition-all duration-700 ease-in-out">
-              Services
-            </h2>
-            <h5 className="lg:text-[18px] transition-all duration-700 ease-in-out w-[95%] xl:w-full text-center">
-              Bring your ideas to life with impressive designs, animations and
-              websites
-            </h5>
+            <Animation delay={0}>
+              <h2 className="lg:text-[45px] xl:text-[55px] bg-gradient-to-br from-normal to-light text-transparent bg-clip-text transition-all duration-700 ease-in-out">
+                Services
+              </h2>
+            </Animation>
+            <Animation delay={0.2}>
+              <h5 className="lg:text-[18px] transition-all duration-700 ease-in-out w-[95%] xl:w-full text-center">
+                Bring your ideas to life with impressive designs, animations and
+                websites
+              </h5>
+            </Animation>
           </div>
           <div className="gap-8 flex flex-wrap lg:gap-14 justify-center items-center transition-all duration-700 ease-in-out">
             {servicesData.map((item, index) => {
               return (
-                <div
-                  key={index}
-                  className="lg:w-[490px] lg:h-[290px] flex flex-col justify-center items-center bg-gradient-to-br from-normal/25 to-dark-hover/25  w-[410px] h-[240px] rounded-[15px] border-normal border-2 px-7 gap-2 transition-all duration-700 ease-in-out "
-                >
-                  <div className="flex justify-center items-center gap-7">
-                    <div className="rotate-180">
-                      <Arrow />
+                <Animation delay={0} key={index}>
+                  <div
+                    key={index}
+                    className="lg:w-[490px] lg:h-[290px] flex flex-col justify-center items-center bg-gradient-to-br from-normal/25 to-dark-hover/25  w-[410px] h-[240px] rounded-[15px] border-normal border-2 px-7 gap-2 transition-all duration-700 ease-in-out "
+                  >
+                    <div className="flex justify-center items-center gap-7">
+                      <div className="rotate-180">
+                        <Arrow />
+                      </div>
+                      {item.icon}
+                      <div>
+                        <Arrow />
+                      </div>
                     </div>
-                    {item.icon}
-                    <div>
-                      <Arrow />
-                    </div>
+                    <h4 className="lg:text-[30px] transition-all duration-700 ease-in-out">
+                      {item.title}
+                    </h4>
+                    <p className="text-center font-extralight text-[14px] lg:text-[16px] transition-all duration-700 ease-in-out">
+                      {item.deskripsi}
+                    </p>
                   </div>
-                  <h4 className="lg:text-[30px] transition-all duration-700 ease-in-out">
-                    {item.title}
-                  </h4>
-                  <p className="text-center font-extralight text-[14px] lg:text-[16px] transition-all duration-700 ease-in-out">
-                    {item.deskripsi}
-                  </p>
-                </div>
+                </Animation>
               );
             })}
           </div>

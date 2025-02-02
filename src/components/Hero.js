@@ -11,7 +11,8 @@ import {
 import { LiaLinkedinIn } from "react-icons/lia";
 import { Section } from "lucide-react";
 import Image from "next/image";
-import { motion } from "motion/react";
+import { motion } from "framer-motion";
+import Animation from "../components/ScrollAnimation.js";
 
 const socialMedia = [
   {
@@ -176,81 +177,94 @@ export default function Hero() {
           <div className="w-full flex justify-center">
             {/* Header Hero */}
             <div className="w-full xl:w-[70%] 2xl:w-[60%]">
-              <h4 className="text-light lg:text-[26px] xl:text-[36px] transition-all duration-700 ease-in-out">
-                Hey, I am Rhizal
-              </h4>
-              <h1 className="w-full md:w-[80%] xl:w-full lg:text-[38px] xl:text-[48px] bg-gradient-to-br from-normal to-light bg-clip-text text-transparent text-[32px] font-extrabold transition-all duration-700">
-                Motion Designer + Video Editor + FrontEnd Developer
-              </h1>
+              <Animation delay={0.2}>
+                <h4 className="text-light lg:text-[26px] xl:text-[36px] transition-all duration-700 ease-in-out">
+                  Hey, I am Rhizal
+                </h4>
+              </Animation>
+              <Animation delay={0.3}>
+                <h1 className="w-full md:w-[80%] xl:w-full lg:text-[38px] xl:text-[48px] bg-gradient-to-br from-normal to-light bg-clip-text text-transparent text-[32px] font-extrabold transition-all duration-700">
+                  Motion Designer + Video Editor + FrontEnd Developer
+                </h1>
+              </Animation>
               {/* xl -> deskripsi sama download cv */}
               <div className="xl:pt-3 xl:flex xl:gap-10 hidden w-full flex-wrap justify-center items-center gap-4">
-                <div className="md:text-[19px] lg:text-[25px] 2xl:text-[28px] leading-tight font-extralight text-[16px] transition-all duration-700 ease-in-out">
-                  I like making motion designs and editing videos to realize
-                  creative ideas and learn a little about web development,
-                  especially on the front-end (beginner).
-                </div>
+                <Animation delay={0.4}>
+                  <div className="md:text-[19px] lg:text-[25px] 2xl:text-[28px] leading-tight font-extralight text-[16px] transition-all duration-700 ease-in-out">
+                    I like making motion designs and editing videos to realize
+                    creative ideas and learn a little about web development,
+                    especially on the front-end (beginner).
+                  </div>
+                </Animation>
                 <div className="w-full md:flex-row md:items-center flex flex-col items-start gap-4 transition-all duration-700 ease-in-out">
                   {/* Button Cv & sosmed */}
                   <div>
-                    <button
-                      type="button"
-                      className="lg:h-14 lg:w-[208px] lg:text-[20px]  text-[18px] group h-12 w-48 rounded-full p-[2px] bg-gradient-to-bl from-normal to-dark-active hover:bg-[#161616] transition-all duration-300 active:scale-95"
-                    >
-                      <div className="flex gap-1 font-[600] bg-[#161616] w-full h-full items-center justify-center rounded-full group-hover:bg-transparent ease-in-out transition-all duration-300 group-active:bg-normal">
-                        <div className="bg-gradient-to-bl from-normal to-dark-active text-transparent bg-clip-text group-hover:text-[#161616] transition-colors duration-300">
-                          Download CV
+                    <Animation delay={0.3}>
+                      <button
+                        type="button"
+                        className="lg:h-14 lg:w-[208px] lg:text-[20px]  text-[18px] group h-12 w-48 rounded-full p-[2px] bg-gradient-to-bl from-normal to-dark-active hover:bg-[#161616] transition-all duration-300 active:scale-95"
+                      >
+                        <div className="flex gap-1 font-[600] bg-[#161616] w-full h-full items-center justify-center rounded-full group-hover:bg-transparent ease-in-out transition-all duration-300 group-active:bg-normal">
+                          <div className="bg-gradient-to-bl from-normal to-dark-active text-transparent bg-clip-text group-hover:text-[#161616] transition-colors duration-300">
+                            Download CV
+                          </div>
+                          <div>
+                            <IoMdDownload
+                              size={20}
+                              className="fill-dark group-hover:fill-[#161616] w-6 h-auto easy-in-out transition-all duration-300"
+                            />
+                          </div>
                         </div>
-                        <div>
-                          <IoMdDownload
-                            size={20}
-                            className="fill-dark group-hover:fill-[#161616] w-6 h-auto easy-in-out transition-all duration-300"
-                          />
-                        </div>
-                      </div>
-                    </button>
+                      </button>
+                    </Animation>
                   </div>
-                  <div className="flex gap-3 md:gap-4">
-                    {socialMedia.map((social, index) => {
-                      return (
-                        <a
-                          key={index}
-                          href={social.path}
-                          target="_blank"
-                          className="border-dark border-2 p-[6px] rounded-full hover:bg-dark easy-in-out transition-all duration-300 active:bg-normal active:scale-90 group"
-                        >
-                          {social.icon}
-                        </a>
-                      );
-                    })}
-                  </div>
+                  <Animation delay={0.3}>
+                    <div className="flex gap-3 md:gap-4">
+                      {socialMedia.map((social, index) => {
+                        return (
+                          <a
+                            key={index}
+                            href={social.path}
+                            target="_blank"
+                            className="border-dark border-2 p-[6px] rounded-full hover:bg-dark easy-in-out transition-all duration-300 active:bg-normal active:scale-90 group"
+                          >
+                            {social.icon}
+                          </a>
+                        );
+                      })}
+                    </div>
+                  </Animation>
                 </div>
               </div>
             </div>
-            {/* deskripsi xl flex */}
             <div className="hidden xl:block w-[50%] relative">
               {/* Background Text */}
               <div className="absolute inset-0 flex items-center justify-center  overflow-hidden">
-                <Image
-                  src="/hero/rhizal.svg"
-                  alt="Rhizal Background"
-                  width={400}
-                  height={160}
-                  className="w-[600px] h-auto lg:w-[750px] opacity-70 blur-[1px] transition-all duration-700 ease-in-out"
-                />
+                <Animation delay={0.5}>
+                  <Image
+                    src="/hero/rhizal.svg"
+                    alt="Rhizal Background"
+                    width={400}
+                    height={160}
+                    className="w-[600px] h-auto lg:w-[750px] opacity-70 blur-[1px] transition-all duration-700 ease-in-out"
+                  />
+                </Animation>
               </div>
               {/* Foreground Photo */}
               <div
                 className="relative z-10 flex items-center justify-center"
                 id="heroImage"
               >
-                <Image
-                  src="/hero/foto.svg"
-                  alt="Rhizal"
-                  id="rotate"
-                  width={160}
-                  height={160}
-                  className="-[250px] lg:w-[300px] 2xl:w-[330px] h-auto rotate-3 transition-all duration-700 ease-in-out"
-                />
+                <Animation delay={0.2}>
+                  <Image
+                    src="/hero/foto.svg"
+                    alt="Rhizal"
+                    id="rotate"
+                    width={160}
+                    height={160}
+                    className="-[250px] lg:w-[300px] 2xl:w-[330px] h-auto rotate-3 transition-all duration-700 ease-in-out"
+                  />
+                </Animation>
               </div>
             </div>
           </div>
@@ -258,70 +272,80 @@ export default function Hero() {
           <div className="xl:hidden w-full relative">
             {/* Background Text */}
             <div className="absolute inset-0 flex items-center justify-center  overflow-hidden">
-              <Image
-                src="/hero/rhizal.svg"
-                alt="Rhizal Background"
-                width={400}
-                height={160}
-                className="w-[600px] h-auto lg:w-[750px] opacity-70 blur-[1px] transition-all duration-700 ease-in-out"
-              />
+              <Animation delay={0.4}>
+                <Image
+                  src="/hero/rhizal.svg"
+                  alt="Rhizal Background"
+                  width={400}
+                  height={160}
+                  className="w-[600px] h-auto lg:w-[750px] opacity-70 blur-[1px] transition-all duration-700 ease-in-out"
+                />
+              </Animation>
             </div>
             {/* Foreground Photo */}
             <div
               className="relative z-10 flex items-center justify-center"
               id="heroImage"
             >
-              <Image
-                src="/hero/foto.svg"
-                alt="Rhizal"
-                id="rotate"
-                width={160}
-                height={160}
-                className="w-[250px] md:w-[300px] lg:w-[350px] h-auto rotate-2 transition-all duration-700 ease-in-out"
-              />
+              <Animation delay={0.2}>
+                <Image
+                  src="/hero/foto.svg"
+                  alt="Rhizal"
+                  id="rotate"
+                  width={160}
+                  height={160}
+                  className="w-[250px] md:w-[300px] lg:w-[350px] h-auto rotate-2 transition-all duration-700 ease-in-out"
+                />
+              </Animation>
             </div>
           </div>
           {/* Deskripsi */}
           <div className="xl:hidden w-full flex flex-wrap justify-center items-center gap-4">
-            <div className="md:text-[19px] lg:text-[25px] text-[16px] font-light transition-all duration-700 ease-in-out">
-              I like making motion designs and editing videos to realize
-              creative ideas and learn a little about web development,
-              especially on the front-end (beginner).
-            </div>
+            <Animation delay={0.6}>
+              <div className="md:text-[19px] lg:text-[25px] text-[16px] font-light transition-all duration-700 ease-in-out">
+                I like making motion designs and editing videos to realize
+                creative ideas and learn a little about web development,
+                especially on the front-end (beginner).
+              </div>
+            </Animation>
             <div className="w-full md:flex-row md:items-center flex flex-col items-start gap-4 transition-all duration-700 ease-in-out">
               {/* Button Cv & sosmed */}
               <div>
-                <button
-                  type="button"
-                  className="lg:h-14 lg:w-[208px] lg:text-[20px]  text-[18px] group h-12 w-48 rounded-full p-[2px] bg-gradient-to-bl from-normal to-dark-active hover:bg-[#161616] transition-all duration-300 active:scale-95"
-                >
-                  <div className="flex gap-1 font-[600] bg-[#161616] w-full h-full items-center justify-center rounded-full group-hover:bg-transparent ease-in-out transition-all duration-300 group-active:bg-normal">
-                    <div className="bg-gradient-to-bl from-normal to-dark-active text-transparent bg-clip-text group-hover:text-[#161616] transition-colors duration-300">
-                      Download CV
+                <Animation delay={0.2}>
+                  <button
+                    type="button"
+                    className="lg:h-14 lg:w-[208px] lg:text-[20px]  text-[18px] group h-12 w-48 rounded-full p-[2px] bg-gradient-to-bl from-normal to-dark-active hover:bg-[#161616] transition-all duration-300 active:scale-95"
+                  >
+                    <div className="flex gap-1 font-[600] bg-[#161616] w-full h-full items-center justify-center rounded-full group-hover:bg-transparent ease-in-out transition-all duration-300 group-active:bg-normal">
+                      <div className="bg-gradient-to-bl from-normal to-dark-active text-transparent bg-clip-text group-hover:text-[#161616] transition-colors duration-300">
+                        Download CV
+                      </div>
+                      <div>
+                        <IoMdDownload
+                          size={20}
+                          className="fill-dark group-hover:fill-[#161616] w-5 h-auto easy-in-out transition-all duration-300"
+                        />
+                      </div>
                     </div>
-                    <div>
-                      <IoMdDownload
-                        size={20}
-                        className="fill-dark group-hover:fill-[#161616] w-5 h-auto easy-in-out transition-all duration-300"
-                      />
-                    </div>
-                  </div>
-                </button>
+                  </button>
+                </Animation>
               </div>
-              <div className="flex gap-3 md:gap-4">
-                {socialMedia.map((social, index) => {
-                  return (
-                    <a
-                      key={index}
-                      href={social.path}
-                      target="_blank"
-                      className="border-dark border-2 p-[6px] rounded-full hover:bg-dark easy-in-out transition-all duration-300 active:bg-normal active:scale-90 group"
-                    >
-                      {social.icon}
-                    </a>
-                  );
-                })}
-              </div>
+              <Animation delay={0.3}>
+                <div className="flex gap-3 md:gap-4">
+                  {socialMedia.map((social, index) => {
+                    return (
+                      <a
+                        key={index}
+                        href={social.path}
+                        target="_blank"
+                        className="border-dark border-2 p-[6px] rounded-full hover:bg-dark easy-in-out transition-all duration-300 active:bg-normal active:scale-90 group"
+                      >
+                        {social.icon}
+                      </a>
+                    );
+                  })}
+                </div>
+              </Animation>
             </div>
           </div>
         </div>
