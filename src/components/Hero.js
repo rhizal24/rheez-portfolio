@@ -259,7 +259,7 @@ export default function Hero() {
                     id="heroImage"
                     width={160}
                     height={160}
-                    className="-[250px] lg:w-[300px] 2xl:w-[330px] h-auto rotate-3 transition-all duration-700 ease-in-out"
+                    className="-[250px] lg:w-[300px] 2xl:w-[330px] h-auto transition-all duration-700 ease-in-out"
                   />
                 </Animation>
               </div>
@@ -268,7 +268,7 @@ export default function Hero() {
           {/* Foto sama text */}
           <div className="xl:hidden w-full relative">
             {/* Background Text */}
-            <div className="absolute inset-0 flex items-center justify-center  overflow-hidden">
+            <div className="absolute inset-0 flex items-center justify-center overflow-hidden">
               <Animation delay={0.4}>
                 <Image
                   src="/hero/rhizal.svg"
@@ -288,7 +288,7 @@ export default function Hero() {
                   id="heroImage"
                   width={160}
                   height={160}
-                  className="w-[250px] md:w-[300px] lg:w-[350px] h-auto rotate-2 transition-all duration-700 ease-in-out"
+                  className="w-[250px] md:w-[300px] lg:w-[350px] h-auto transition-all duration-700 ease-in-out"
                 />
               </Animation>
             </div>

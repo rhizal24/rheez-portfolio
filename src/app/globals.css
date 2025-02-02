@@ -116,19 +116,3 @@ h4{
     transform: translateY(0px);
   }
 }
-
-#rotate{
-  animation: rotate 3s ease-in-out infinite;
-}
-
-@keyframes rotate {
-  0% {
-    transform: rotate(0deg);
-  }
-  50% {
-    transform: rotate(-1.5deg);
-  }
-  100% {
-    transform: rotate(0deg);
-  }
-}
