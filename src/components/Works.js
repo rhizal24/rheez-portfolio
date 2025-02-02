@@ -142,7 +142,7 @@ export default function RecentWorks() {
   return (
     <section className="bg-[#2f2f2f]/40" id="works">
       <div className="container transition-all duration-600 ease-in-out">
-        <div className="w-full flex flex-col gap-8 px-4 py-28">
+        <div className="w-full flex flex-col gap-8 py-20 pb-[88px] md:py-32 md:pb-[148px]">
           {/* Header */}
           <div className="flex flex-col justify-center items-center gap-2">
             <Animation delay={0}>
@@ -151,7 +151,7 @@ export default function RecentWorks() {
               </h2>
             </Animation>
             <div className="flex text-[12px] md:text-[14px] lg:text-[16px] xl:text-[18px] transition-all duration-700 ease-in-out">
-              <Animation delay={0.1}>
+              <Animation delay={0.5}>
                 {categories.map((category) => (
                   <button
                     type="button"
@@ -187,14 +187,14 @@ export default function RecentWorks() {
           </div>
 
           {/* Item of recent works */}
-          <div className="flex flex-col gap-10 md:flex-row md:flex-wrap justify-center items-center">
+          <div className="flex flex-col gap-6 md:gap-10 md:flex-row md:flex-wrap justify-center items-center">
             {visibleWorks.map((work) => (
-              <Animation delay={0.2} key={work.id}>
+              <Animation delay={1} key={work.id}>
                 <a
                   key={work.id}
                   href={work.url}
                   target="_blank"
-                  className="relative w-[410px] h-[230px] flex flex-col justify-center items-center hover:scale-105 transition-all duration-300 ease-in-out active:scale-95"
+                  className="relative md:w-[410px] md:h-[230px] w-[340px] h-[190px] flex flex-col justify-center items-center hover:scale-105 transition-all duration-300 ease-in-out active:scale-95 "
                 >
                   <div className="absolute rounded-[15px] overflow-hidden">
                     <Image
@@ -208,7 +208,7 @@ export default function RecentWorks() {
                   <div className="absolute text-light w-full h-full border-2 border-normal bg-transparent rounded-[15px] z-10"></div>
                   <div className="absolute text-light w-full h-full bg-gradient-to-br from-normal/20 to-darker/20 rounded-[15px] z-10"></div>
                   <div className="text-light flex items-center justify-center flex-col z-30">
-                    <h1 className="text-center text-light hover:text-light-active transition-all duration-300 ease-in-out hover:underline active:scale-95">
+                    <h1 className="md:text-[32px] text-[28px] text-center text-light hover:text-light-active transition-all duration-300 ease-in-out hover:underline active:scale-95">
                       {work.title}
                     </h1>
                     <p className="text-center font-normal text-light hover:text-light-active transition-all duration-300 ease-in-out hover:underline active:scale-95">
@@ -221,7 +221,7 @@ export default function RecentWorks() {
           </div>
 
           {/* See More... */}
-          <Animation delay={0}>
+          <Animation delay={1.2}>
             {(hiddenProjectCount > 0 || showAll) && (
               <div className="text-center">
                 <button

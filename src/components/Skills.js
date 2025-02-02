@@ -13,49 +13,49 @@ import Animation from "../components/ScrollAnimation.js";
 const Categories = [
   {
     icon: (
-      <SiAdobeaftereffects className="xl:w-[70px] xl:h-[70px] md:w-[50px] md:h-[50px] w-10 h-10 fill-normal" />
+      <SiAdobeaftereffects className="xl:w-[70px] xl:h-[70px] md:w-[50px] md:h-[50px] w-12 h-12 fill-normal" />
     ),
     level: "100%",
     softwareName: "After Effects",
   },
   {
     icon: (
-      <SiAdobepremierepro className="xl:w-[70px] xl:h-[70px] md:w-[50px] md:h-[50px] w-10 h-10 fill-normal" />
+      <SiAdobepremierepro className="xl:w-[70px] xl:h-[70px] md:w-[50px] md:h-[50px] w-12 h-12 fill-normal" />
     ),
     level: "100%",
     softwareName: "Premier Pro",
   },
   {
     icon: (
-      <SiDavinciresolve className="xl:w-[70px] xl:h-[70px] md:w-[50px] md:h-[50px] w-10 h-10 fill-normal" />
+      <SiDavinciresolve className="xl:w-[70px] xl:h-[70px] md:w-[50px] md:h-[50px] w-12 h-12 fill-normal" />
     ),
     level: "90%",
     softwareName: "Davinci Resolve",
   },
   {
     icon: (
-      <SiFigma className="xl:w-[70px] xl:h-[70px] md:w-[50px] md:h-[50px] w-10 h-10 fill-normal" />
+      <SiFigma className="xl:w-[70px] xl:h-[70px] md:w-[50px] md:h-[50px] w-12 h-12 fill-normal" />
     ),
     level: "98%",
     softwareName: "Figma",
   },
   {
     icon: (
-      <SiAdobeillustrator className="xl:w-[70px] xl:h-[70px] md:w-[50px] md:h-[50px] w-10 h-10 fill-normal" />
+      <SiAdobeillustrator className="xl:w-[70px] xl:h-[70px] md:w-[50px] md:h-[50px] w-12 h-12 fill-normal" />
     ),
     level: "90%",
     softwareName: "Adobe Illustrator",
   },
   {
     icon: (
-      <SiAdobephotoshop className="xl:w-[70px] xl:h-[70px] md:w-[50px] md:h-[50px] w-10 h-10 fill-normal" />
+      <SiAdobephotoshop className="xl:w-[70px] xl:h-[70px] md:w-[50px] md:h-[50px] w-12 h-12 fill-normal" />
     ),
     level: "80%",
     softwareName: "Photoshop",
   },
   {
     icon: (
-      <SiJavascript className="xl:w-[70px] xl:h-[70px] md:w-[50px] md:h-[50px] w-10 h-10 fill-normal" />
+      <SiJavascript className="xl:w-[70px] xl:h-[70px] md:w-[50px] md:h-[50px] w-12 h-12 fill-normal" />
     ),
     level: "80%",
     softwareName: "JavaScript",
@@ -106,28 +106,28 @@ export default function Skills() {
     // </div>
     <section className="bg-[#2f2f2f]/40" id="skills">
       <div className="container transition-all duration-600 ease-in-out">
-        <div className="w-full flex flex-col justify-center items-center gap-10 px-4 py-28">
+        <div className="w-full flex flex-col justify-center items-center gap-10 px-4 py-20 pb-28 md:py-32 md:pb-[148px]">
           <div className="flex flex-col justify-center items-center">
             <Animation>
               <h2 className="lg:text-[45px] xl:text-[55px] bg-gradient-to-br from-normal to-light text-transparent bg-clip-text transition-all duration-700 ease-in-out">
                 My Skills
               </h2>
             </Animation>
-            <Animation delay={0.2}>
+            <Animation delay={0.4}>
               <div className="w-full flex flex-col justify-center items-center gap-4">
-                <h5 className="lg:w-[80%] lg:text-[18px] md:w-[65%] transition-all duration-700 ease-in-out w-[95%] xl:w-[65%] text-center">
+                <h5 className="lg:w-[80%] md:text-[14px] lg:text-[18px] text-[12px] md:w-[65%] transition-all duration-700 ease-in-out w-[95%] xl:w-[65%] text-center">
                   Below are the skills and expertise that I have and have
                   developed to date through the experience that I have.
                 </h5>
               </div>
             </Animation>
           </div>
-          <div className="flex flex-wrap gap-4 justify-center items-center xl:gap-6">
+          <div className="flex flex-wrap gap-6 justify-center items-center xl:gap-6">
             {Categories.map((item) => {
               return (
-                <Animation delay={0.1} key={item.softwareName}>
+                <Animation delay={0.9} key={item.softwareName}>
                   <div
-                    className="xl:text-[16px] xl:w-[200px] md:rounded-[15px] xl:h-[240px] md:w-[160px] md:h-[180px] md:text-[12px] text-[9px] flex flex-col justify-center items-center bg-normal/20 w-[125px] h-[145px] rounded-[11px] gap-1 border-[1px] border-normal/20 transition-all duration-700 ease-in-out"
+                    className="xl:text-[16px] xl:w-[200px] md:rounded-[15px] xl:h-[240px] md:w-[160px] md:h-[180px] md:text-[14px] text-[12px] flex flex-col justify-center items-center bg-normal/20 w-[155px] h-[180px] rounded-[11px] gap-1 border-[1px] border-normal/20 transition-all duration-700 ease-in-out"
                     key={item.softwareName}
                   >
                     <div>{item.icon}</div>

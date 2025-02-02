@@ -10,7 +10,7 @@ const servicesData = [
     icon: (
       <MdAnimation
         size={60}
-        className="lg:w-20 lg:h-20 transition-all duration-700 ease-in-out"
+        className="lg:w-20 lg:h-20 md:w-14 md:h-14 w-10 h-10 transition-all duration-700 ease-in-out"
       />
     ),
     title: "Motion Design",
@@ -21,7 +21,7 @@ const servicesData = [
     icon: (
       <FaComputer
         size={60}
-        className="lg:w-20 lg:h-20 transition-all duration-700 ease-in-out "
+        className="lg:w-20 lg:h-20 md:w-14 md:h-14 w-10 h-10 transition-all duration-700 ease-in-out "
       />
     ),
     title: "Video Editing",
@@ -32,7 +32,7 @@ const servicesData = [
     icon: (
       <CgWebsite
         size={60}
-        className="lg:w-20 lg:h-20 transition-all duration-700 ease-in-out"
+        className="lg:w-20 lg:h-20 md:w-14 md:h-14 w-10 h-10 transition-all duration-700 ease-in-out"
       />
     ),
     title: "Web Design",
@@ -82,41 +82,43 @@ export default function Services() {
     // </div>
     <section id="services" name="services">
       <div className="container transition-all duration-600 ease-in-out">
-        <div className="w-full flex justify-center flex-col items-center py-28 px-4 gap-14">
+        <div className="w-full flex justify-center flex-col items-center py-20 pb-28 md:py-32 md:pb-[148px] gap-10">
           <div className="flex justify-center items-center flex-col">
             <Animation delay={0}>
               <h2 className="lg:text-[45px] xl:text-[55px] bg-gradient-to-br from-normal to-light text-transparent bg-clip-text transition-all duration-700 ease-in-out">
                 Services
               </h2>
             </Animation>
-            <Animation delay={0.2}>
-              <h5 className="lg:text-[18px] transition-all duration-700 ease-in-out w-[95%] xl:w-full text-center">
-                Bring your ideas to life with impressive designs, animations and
-                websites
-              </h5>
+            <Animation delay={0.4}>
+              <div className="flex items-center justify-center">
+                <h5 className="md:text-[14px] lg:text-[18px] text-[12px] transition-all duration-700 ease-in-out md:w-[95%] w-[80%] xl:w-full text-center">
+                  Bring your ideas to life with impressive designs, animations
+                  and websites
+                </h5>
+              </div>
             </Animation>
           </div>
-          <div className="gap-8 flex flex-wrap lg:gap-14 justify-center items-center transition-all duration-700 ease-in-out">
+          <div className="gap-6 md:gap-8 flex flex-wrap lg:gap-14 justify-center items-center transition-all duration-700 ease-in-out">
             {servicesData.map((item, index) => {
               return (
-                <Animation delay={0} key={index}>
+                <Animation delay={0.8} key={index}>
                   <div
                     key={index}
-                    className="lg:w-[490px] lg:h-[290px] flex flex-col justify-center items-center bg-gradient-to-br from-normal/25 to-dark-hover/25  w-[410px] h-[240px] rounded-[15px] border-normal border-2 px-7 gap-2 transition-all duration-700 ease-in-out "
+                    className="lg:w-[490px] lg:h-[290px] flex flex-col justify-center items-center bg-gradient-to-br from-normal/25 to-dark-hover/25 md:w-[410px] md:h-[255px] w-[340px] h-[210px] rounded-[15px] border-normal border-2 px-6 gap-2 transition-all duration-700 ease-in-out "
                   >
-                    <div className="flex justify-center items-center gap-7">
+                    <div className="flex justify-center items-center gap-5 md:gap-7">
                       <div className="rotate-180">
-                        <Arrow />
+                        <Arrow overlap={8} />
                       </div>
                       {item.icon}
                       <div>
-                        <Arrow />
+                        <Arrow overlap={8} />
                       </div>
                     </div>
-                    <h4 className="lg:text-[30px] transition-all duration-700 ease-in-out">
+                    <h4 className="lg:text-[30px] md:text-[22px] text-[20px] transition-all duration-700 ease-in-out">
                       {item.title}
                     </h4>
-                    <p className="text-center font-extralight text-[14px] lg:text-[16px] transition-all duration-700 ease-in-out">
+                    <p className="text-center font-extralight text-[11px] md:text-[14px] lg:text-[16px] transition-all duration-700 ease-in-out">
                       {item.deskripsi}
                     </p>
                   </div>

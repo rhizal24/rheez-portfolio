@@ -18,7 +18,7 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
+    <html lang="en" className="smooth-scroll">
       <head>
         <link rel="icon" href="./icon/rheez.png" />
       </head>

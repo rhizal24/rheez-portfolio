@@ -19,49 +19,49 @@ const socialMedia = [
     name: "Linkedin",
     path: "https://www.linkedin.com/in/muhammad-rhizal-rhomadon-2928752ba/",
     icon: (
-      <LiaLinkedinIn className="w-8 h-8 lg:w-9 lg:h-9 fill-dark  group-hover:fill-[#161616] easy-in-out transition-all duration-300" />
+      <LiaLinkedinIn className="w-5 h-5 md:w-7 md:h-7  lg:w-9 lg:h-9 fill-dark  group-hover:fill-[#161616] easy-in-out transition-all duration-300" />
     ),
   },
   {
     name: "Instagram",
     path: "https://instagram.com/rhizal.rh_",
     icon: (
-      <FaInstagram className="w-8 h-8 lg:w-9 lg:h-9 fill-dark  group-hover:fill-[#161616] easy-in-out transition-all duration-300" />
+      <FaInstagram className="w-5 h-5 md:w-7 md:h-7 lg:w-9 lg:h-9 fill-dark  group-hover:fill-[#161616] easy-in-out transition-all duration-300" />
     ),
   },
   {
     name: "Discord",
     path: "#",
     icon: (
-      <FaDiscord className="w-8 h-8 lg:w-9 lg:h-9 fill-dark  group-hover:fill-[#161616] easy-in-out transition-all duration-300" />
+      <FaDiscord className="w-5 h-5 md:w-7 md:h-7 lg:w-9 lg:h-9 fill-dark  group-hover:fill-[#161616] easy-in-out transition-all duration-300" />
     ),
   },
   {
     name: "Github",
     path: "https://github.com/rhizal24",
     icon: (
-      <FaGithub className="w-8 h-8 lg:w-9 lg:h-9 fill-dark  group-hover:fill-[#161616] easy-in-out transition-all duration-300" />
+      <FaGithub className="w-5 h-5 md:w-7 md:h-7 lg:w-9 lg:h-9 fill-dark  group-hover:fill-[#161616] easy-in-out transition-all duration-300" />
     ),
   },
   {
     name: "Youtube",
     path: "https://youtube.com/@rheez05",
     icon: (
-      <FaYoutube className="w-8 h-8 lg:w-9 lg:h-9 fill-dark group-hover:fill-[#161616] easy-in-out transition-all duration-300" />
+      <FaYoutube className="w-5 h-5 md:w-7 md:h-7 lg:w-9 lg:h-9 fill-dark group-hover:fill-[#161616] easy-in-out transition-all duration-300" />
     ),
   },
   {
     name: "Dribbble",
     path: "https://dribbble.com/rhizalrhoma",
     icon: (
-      <FaDribbble className="w-8 h-8 lg:w-9 lg:h-9 fill-dark  group-hover:fill-[#161616] easy-in-out transition-all duration-300" />
+      <FaDribbble className="w-5 h-5 md:w-7 md:h-7 lg:w-9 lg:h-9 fill-dark  group-hover:fill-[#161616] easy-in-out transition-all duration-300" />
     ),
   },
   {
     name: "TikTok",
     path: "https://www.tiktok.com/@zaalrhom",
     icon: (
-      <FaTiktok className="w-8 h-8 lg:w-9 lg:h-9 fill-dark  group-hover:fill-[#161616] easy-in-out transition-all duration-300" />
+      <FaTiktok className="w-5 h-5 md:w-7 md:h-7 lg:w-9 lg:h-9 fill-dark  group-hover:fill-[#161616] easy-in-out transition-all duration-300" />
     ),
   },
 ];
@@ -170,9 +170,9 @@ export default function Hero() {
     //     </ul>
     //   </div>
     // </div>
-    <section id="hero" name="Hero">
+    <section id="hero">
       <div className="container transition-all duration-600 ease-in-out">
-        <div className="flex flex-wrap justify-center px-4 gap-14 text-light py-28">
+        <div className="flex flex-wrap justify-center px-4 gap-14 text-light py-[92px] md:py-36">
           {/* Header */}
           <div className="w-full flex justify-center">
             {/* Header Hero */}
@@ -183,14 +183,14 @@ export default function Hero() {
                 </h4>
               </Animation>
               <Animation delay={0.3}>
-                <h1 className="w-full md:w-[80%] xl:w-full lg:text-[38px] xl:text-[48px] bg-gradient-to-br from-normal to-light bg-clip-text text-transparent text-[32px] font-extrabold transition-all duration-700">
+                <h1 className="w-full md:w-[80%] xl:w-full lg:text-[38px] xl:text-[48px] bg-gradient-to-br from-normal to-light bg-clip-text text-transparent md:text-[32px] text-[29px] font-extrabold transition-all duration-700">
                   Motion Designer + Video Editor + FrontEnd Developer
                 </h1>
               </Animation>
               {/* xl -> deskripsi sama download cv */}
               <div className="xl:pt-3 xl:flex xl:gap-10 hidden w-full flex-wrap justify-center items-center gap-4">
                 <Animation delay={0.4}>
-                  <div className="md:text-[19px] lg:text-[25px] 2xl:text-[28px] leading-tight font-extralight text-[16px] transition-all duration-700 ease-in-out">
+                  <div className="md:text-[19px] lg:text-[25px] 2xl:text-[28px] leading-tight font-extralight text-[12px] transition-all duration-700 ease-in-out">
                     I like making motion designs and editing videos to realize
                     creative ideas and learn a little about web development,
                     especially on the front-end (beginner).
@@ -251,10 +251,13 @@ export default function Hero() {
                 </Animation>
               </div>
               {/* Foreground Photo */}
-              <div className="relative z-10 flex items-center justify-center">
+              <div
+                id="rotateImage"
+                className="relative z-10 flex items-center justify-center"
+              >
                 <Animation delay={0.2}>
                   <Image
-                    src="/hero/foto.svg"
+                    src="/hero/foto.png"
                     alt="Rhizal"
                     id="heroImage"
                     width={160}
@@ -280,15 +283,18 @@ export default function Hero() {
               </Animation>
             </div>
             {/* Foreground Photo */}
-            <div className="relative z-10 flex items-center justify-center">
+            <div
+              id="rotateImage"
+              className="relative z-10 flex items-center justify-center"
+            >
               <Animation delay={0.2}>
                 <Image
-                  src="/hero/foto.svg"
+                  src="/hero/foto.png"
                   alt="Rhizal"
                   id="heroImage"
                   width={160}
                   height={160}
-                  className="w-[250px] md:w-[300px] lg:w-[350px] h-auto transition-all duration-700 ease-in-out"
+                  className="w-[215px] md:w-[300px] lg:w-[350px] h-auto transition-all duration-700 ease-in-out"
                 />
               </Animation>
             </div>
@@ -296,7 +302,7 @@ export default function Hero() {
           {/* Deskripsi */}
           <div className="xl:hidden w-full flex flex-wrap justify-center items-center gap-4">
             <Animation delay={0.6}>
-              <div className="md:text-[19px] lg:text-[25px] text-[16px] font-light transition-all duration-700 ease-in-out">
+              <div className="md:text-[19px] lg:text-[25px] text-[14px] font-light transition-all duration-700 ease-in-out">
                 I like making motion designs and editing videos to realize
                 creative ideas and learn a little about web development,
                 especially on the front-end (beginner).
@@ -308,16 +314,16 @@ export default function Hero() {
                 <Animation delay={0.2}>
                   <button
                     type="button"
-                    className="lg:h-14 lg:w-[208px] lg:text-[20px]  text-[18px] group h-12 w-48 rounded-full p-[2px] bg-gradient-to-bl from-normal to-dark-active hover:bg-[#161616] transition-all duration-300 active:scale-95"
+                    className="lg:h-14 lg:w-[208px] lg:text-[20px] text-[16px] group md:h-12 md:w-48 w-[166px] h-10 rounded-full p-[2px] bg-gradient-to-bl from-normal to-dark-active hover:bg-[#161616] transition-all duration-300 active:scale-95"
                   >
                     <div className="flex gap-1 font-[600] bg-[#161616] w-full h-full items-center justify-center rounded-full group-hover:bg-transparent ease-in-out transition-all duration-300 group-active:bg-normal">
-                      <div className="bg-gradient-to-bl from-normal to-dark-active text-transparent bg-clip-text group-hover:text-[#161616] transition-colors duration-300">
+                      <div className="bg-gradient-to-bl from-normal to-dark-active text-transparent bg-clip-text group-hover:text-[#161616] transition-colors duration-300 md:text-[18px]">
                         Download CV
                       </div>
                       <div>
                         <IoMdDownload
                           size={20}
-                          className="fill-dark group-hover:fill-[#161616] w-5 h-auto easy-in-out transition-all duration-300"
+                          className="fill-dark group-hover:fill-[#161616] w-4 h-auto md:w-5 md:h-5 easy-in-out transition-all duration-300"
                         />
                       </div>
                     </div>
@@ -325,7 +331,7 @@ export default function Hero() {
                 </Animation>
               </div>
               <Animation delay={0.3}>
-                <div className="flex gap-3 md:gap-4">
+                <div className="w-[100%] flex gap-2 md:gap-4">
                   {socialMedia.map((social, index) => {
                     return (
                       <a

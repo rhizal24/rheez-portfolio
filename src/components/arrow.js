@@ -36,6 +36,7 @@ export default function Arrow({ overlap = 0 }) {
             viewBox="0 0 22 29"
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
+            className="w-7 h-7 md:h-8 md:w-8"
           >
             <path
               d="M21.5 0L0.5 14.5L21.5 29V23.3871L8.62903 14.5L21.5 5.6129V0Z"
