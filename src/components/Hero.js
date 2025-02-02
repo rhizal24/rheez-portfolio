@@ -259,7 +259,7 @@ export default function Hero() {
                   <Image
                     src="/hero/foto.svg"
                     alt="Rhizal"
-                    id="rotate"
+                    id="heroImage"
                     width={160}
                     height={160}
                     className="-[250px] lg:w-[300px] 2xl:w-[330px] h-auto rotate-3 transition-all duration-700 ease-in-out"
@@ -291,7 +291,7 @@ export default function Hero() {
                 <Image
                   src="/hero/foto.svg"
                   alt="Rhizal"
-                  id="rotate"
+                  id="heroImage"
                   width={160}
                   height={160}
                   className="w-[250px] md:w-[300px] lg:w-[350px] h-auto rotate-2 transition-all duration-700 ease-in-out"
