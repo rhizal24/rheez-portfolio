@@ -251,10 +251,7 @@ export default function Hero() {
                 </Animation>
               </div>
               {/* Foreground Photo */}
-              <div
-                className="relative z-10 flex items-center justify-center"
-                id="heroImage"
-              >
+              <div className="relative z-10 flex items-center justify-center">
                 <Animation delay={0.2}>
                   <Image
                     src="/hero/foto.svg"
@@ -283,10 +280,7 @@ export default function Hero() {
               </Animation>
             </div>
             {/* Foreground Photo */}
-            <div
-              className="relative z-10 flex items-center justify-center"
-              id="heroImage"
-            >
+            <div className="relative z-10 flex items-center justify-center">
               <Animation delay={0.2}>
                 <Image
                   src="/hero/foto.svg"
